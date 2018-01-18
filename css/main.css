@@ -1,7 +1,14 @@
 main {
     background-color: antiquewhite;
 }
-
+nav {
+    float:left;
+    float: top;
+}
+blockquote {
+    margin-top:0;
+    margin-bottom:0;
+}
 body {
     font-size: 16px;
     line-height: 32px;
@@ -10,7 +17,7 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     color: whitesmoke;
 }
@@ -24,7 +31,7 @@ h2 {
 header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
-    max-width:600px;
+    max-width:1000px;
 }
 
 header, footer, footer a {

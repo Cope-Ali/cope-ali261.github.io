@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> CIT 261 JavaScript - Loops, Conditional Statements, Functions, Arrays | Ali Cope | BYU-Idaho</title>
+        <meta name="description" content=" Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays documentation site to showcase lesson mastery for AliCope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+        <link rel="stylesheet" href="css/main.css">
+        <script type = "text/javascript">
+            // times table function. accepts a times table number and table size from user and displays the times table using a while loop//
+
+            function timesTable(timesTableNum, tableSize){
+                var timesTableNum = parseInt(document.getElementById("timesTableNumInput").value);
+                var tableSize = parseInt(document.getElementById("timesTableSizeInput").value);
+                var ans = 0;
+                var i = 0;
+                var output = "";
+                while (i<=tableSize){
+                    ans = timesTableNum*i;
+                    output += timesTableNum + " x " + i + " = " + ans + "<br>";
+                    i++;
+                }
+                document.getElementById("timesTableDiv").innerHTML = output;
+            }
+        </script>
+              </head>
+        <body>
+            <header>
+                <h1> Ali Cope</h1>
+            </header>
+            <nav>
+                <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href=""> Next Lesson </a></li>
+                    <li><a href="#loops">Loops</a></li>
+                    <li><a href="#condState">Conditional Statements</a></li>
+                    <li><a href="#array">Arrays</a></li>
+                </ul>
+            </nav>
+            <main>
+                <h2>Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays</h2>
+            <!---All about functions--->
+                <h3> Functions </h3>
+                <p>
+                Functions are the smallest part of a program that perform an action. There are many different types of functions. On this page you will see functions used to showcase understanding of Loops, Conditional Statements, and Arrays. All functions follow the same format and have the same basic parts.<br>
+                <blockquote>function functionName(<i>parameter1, parameter2,...</i>){
+                        <blockquote>
+                    statements; <br>
+                    return value; <br>
+                            }</blockquote>
+                </blockquote>
+                <ul>
+                    <li> function keyword - this lets the computer know you are starting a function</li>
+                    <li> functionName - this unique identifier is used to call (or run) the function. </li>
+                    <li> parameter list - this is used to identify what variables (information) will be fed into the function. when the function is called using its name, the value of the parameters can be assigned.</li>
+                    <li> statements - this is where all the work of the function is done. </li>
+                    <li> return value - this is the result of the function or what comes out of it. It is returned to the part of the program that called the function (or made it run)</li>
+                </ul>
+               Now lets show some functions at work!
+                </p>
+            <hr>
+            <!--- Loops --->
+            <h3><a name="loops"></a> Loops </h3>
+            <p>
+                Loops refer to a function where the statments are run multiple times while a certian condition applys. For our example we are going to do a loop that will display a times table. The user will input which times table they want to see and how large they would like it. When the user pushes the button, the computer will call the function to run. The statements inside the function will calculate the times table and add each times table to what will be the output, until the table size that the user specified is met. When the size is met the program will send the total table to the computer for it to display. The code for this loop looks like this:
+                <blockquote>
+
+                    function timesTable(timesTableNum, tableSize){ <br>
+                   <blockquote> var timesTableNum = parseInt(document.getElementById("timesTableNumInput").value); <br>
+                    var tableSize = parseInt(document.getElementById("timesTableSizeInput").value); <br>
+                    var ans = 0; <br>
+                    var i = 0; <br>
+                    var output = "";<br>
+                        while (i<=tableSize)
+                             {<br><blockquote>
+                             ans = timesTableNum*i;
+                             output += timesTableNum + " x " + i + "    = " + ans + &lt;br&gt;;<br>
+                             i++;}</blockquote>
+                document.getElementById("timesTableDiv").innerHTML = output; }</blockquote>
+            </blockquote>
+                <h4> Loops Example - Times Tables</h4>
+            Please enter which times table you want to see <br>   <i>(example "5" for a 5 times table or "10" for 10 times table)</i> <input type="text" id="timesTableNumInput"> <br>
+            Please enter the size of table you would like to see. This will be the last times table you will see. <br>      <i>(example for a table that goes from 5x0 -> 5x10 enter "10")</i> <input type="text" id="timesTableSizeInput">
+                <button type="button" onclick="timesTable()"> Show the table!</button><br>
+                Results: <br>
+            <div id="timesTableDiv"></div>
+            </p>
+<hr>
+            <!---- Conditional Statements ---->
+            <h3><a name="condState"></a> Conditional Statements </h3>
+            <p>
+            </p>
+<hr>
+            <!---- Arrays --->
+            <h3><a name="array"></a>Arrays</h3>
+            <p>
+            </p>
+            </main>
+            <footer>
+                <p>&copy Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+            </footer>
+        </body>
+        </html>
