@@ -5,6 +5,9 @@ blockquote {
     margin-top:0;
     margin-bottom:0;
 }
+nav{
+    align-content: center;
+}
 body {
     font-size: 16px;
     line-height: 32px;
