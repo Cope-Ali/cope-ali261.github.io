@@ -22,6 +22,24 @@
                 }
                 document.getElementById("timesTableDiv").innerHTML = output;
             }
+
+        // Can you Ride function. Determine if a rider can ride space mountain by themselves. Conditions=Must be 7 and 40 in
+            function canRide(age,height){
+                var age = parseInt(document.getElementById("riderAge").value);
+                var height = parseInt(document.getElementById("riderHeight").value);
+                var output = "";
+                     if (age >= 7 && height >= 40){
+                         output = "Hooray! You can ride Space Mountain by yourself!";
+                     }
+                    else if (height >= 40){
+                        output = "Not quite old enough, but don't give up! You can still ride with another rider who is 14 or older!";
+                    }
+                    else {
+                        output = "I am sorry you must be over 40 inches to ride, and 7 or older to ride by yourself";
+                    }
+                document.getElementById("rideDiv").innerHTML = output;
+            }
+
         </script>
               </head>
         <body>
@@ -89,12 +107,42 @@
             <!---- Conditional Statements ---->
             <h3><a name="condState"></a> Conditional Statements </h3>
             <p>
-            </p>
+                Conditional Statements ask the computer to evaluate if a condition or series of conditions are met. We go though this in our lives as well. For example, in order to go on space mountain by yourself you have to be at least 7 years old and 40 inches tall. We can write a function to ask the user for their age and height to determine if they can ride alone. If the rider is over 40 inches but not yet 7 they can still ride with another rider who is over 14. The function would look like this.
+                <blockquote>
+                    function canRide(age,height){
+                   <blockquote> var age = parseInt(document.getElementById("riderAge").value);<br>
+                    var height = parseInt(document.getElementById("riderHeight").value);<br>
+                    var output = "";<br>
+                    <blockquote>if (age >= 7 && height >= 40){<br>
+                    <blockquote>output = "Hooray! You can ride Space Mountain by yourself!";<br>
+                        }</blockquote>
+                    else if (height >= 40){<br>
+                    <blockquote>output = "Not quite old enough, but don't give up! You can still ride with another rider who is 14 or older!";<br>
+                        }</blockquote>
+                    else {<br>
+                    <blockquote>output = "I am sorry you must be over 40 inches to ride, and 7 or older to ride by yourself";<br>
+                        }</blockquote></blockquote>
+                    document.getElementById("rideDiv").innerHTML = output;
+                       }</blockquote>
+    </blockquote>
+    Lets give it a try!
+    <h4> Conditional Statement Example</h4>
+    Space Mountain is one of the all time best rides at Disneyland. Even if no one else want to go, it is a must do ride. Lets find out if you can ride by yourself. <br>
+    How old are you? <input type="text" id="riderAge"><br>
+    How tall are you in inches? <input type="text" id="riderHeight"><br>
+    Can you ride? <button type="button" onclick="canRide()"> Find out!</button><br>
+    Results: <div id="rideDiv"></div>
+    </p>
 <hr>
             <!---- Arrays --->
             <h3><a name="array"></a>Arrays</h3>
             <p>
             </p>
+    <hr>
+    <!-- Associative Arrays-->
+    <h3> Associative Arrays</h3>
+    <p>
+    </p>
             </main>
             <footer>
                 <p>&copy Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
