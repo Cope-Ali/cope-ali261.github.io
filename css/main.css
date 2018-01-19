@@ -5,9 +5,7 @@ blockquote {
     margin-top:0;
     margin-bottom:0;
 }
-nav{
-    align-content: center;
-}
+
 body {
     font-size: 16px;
     line-height: 32px;
@@ -27,13 +25,13 @@ h2 {
     border-bottom: 1px solid #bbb;
 }
 
-header, main, footer {
+header, main, footer, nav {
     margin: 1.25rem auto;
     padding: .5rem;
     max-width:800px;
 }
 
-header, footer, footer a {
+header, footer, footer a, nav {
     text-align: center;
     background-color:darkslategrey;
     color: whitesmoke;
