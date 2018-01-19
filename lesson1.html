@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> CIT 261 JavaScript - Loops, Conditional Statements, Functions, Arrays | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays documentation site to showcase lesson mastery for AliCope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+        <meta name="description" content=" Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays, Associative Arrays documentation site to showcase lesson mastery for AliCope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
         <link rel="stylesheet" href="css/main.css">
         <script type = "text/javascript">
             // times table function. accepts a times table number and table size from user and displays the times table using a while loop//
@@ -39,7 +39,17 @@
                     }
                 document.getElementById("rideDiv").innerHTML = output;
             }
-
+            var rides = new Array(6);
+            var rides = ["Space Mountain", " Dumbo", " Star Tours", " Splash Mountain", " Jungle Cruise", " Teacups"];
+            function addRide(){
+                newArrayRide = document.getElementById("newRide").value;
+                rides.push(newArrayRide);
+                document.getElementById("ridesArrayDiv").innerHTML = rides.toString();
+            }
+            function addPirates(){
+                rides[4] = "Pirates";
+                document.getElementById("updatedRidesDiv").innerHTML = rides.toString();
+            }
         </script>
               </head>
         <body>
@@ -56,7 +66,7 @@
                 </ul>
             </nav>
             <main>
-                <h2>Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays</h2>
+                <h2>Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays, Associative Arrays</h2>
             <!---All about functions--->
                 <h3> Functions </h3>
                 <p>
@@ -127,7 +137,7 @@
     </blockquote>
     Lets give it a try!
     <h4> Conditional Statement Example</h4>
-    Space Mountain is one of the all time best rides at Disneyland. Even if no one else want to go, it is a must do ride. Lets find out if you can ride by yourself. <br>
+    Space Mountain is one of the all time best rides at Disneyland. Even if no one else wants to go, it is a must do ride. Lets find out if you can ride by yourself. <br>
     How old are you? <input type="text" id="riderAge"><br>
     How tall are you in inches? <input type="text" id="riderHeight"><br>
     Can you ride? <button type="button" onclick="canRide()"> Find out!</button><br>
@@ -137,7 +147,26 @@
             <!---- Arrays --->
             <h3><a name="array"></a>Arrays</h3>
             <p>
-            </p>
+                Arrays are a speccial kind of variable that can hold more than one value. This allows us to store lists in one variable. Here are a few important things to understand about arrays. <br>
+
+                    Syntax - var<italics>array_name = [item1, item2, item3,...]</italics><br>
+                Creating an Array - To create a new array we use "new" like in following example:
+                    <blockquote> var rides = <italics>new</italics> Array[Space Mountain, Dumbo, Star Tours, Splash Mountain, Jungle Cruise]</blockquote>
+                Each item seperated by a comma is stored in a spot in the array. Each spot is numbered starting with 0. You can see any item in an array by using its number.
+                    <blockquote>For example: rides[0] = Space Mountain, rides[3]= Splash Mountain </blockquote>
+                You can add new items to an existing array by "pushing" into the list.
+                    <blockquote>For example: rides.push(teacups) would add "Teacups" to the last spot in our array.</blockquote>
+                Array Length - All arrays have a special property called "length" this tells us how many items are in the array.
+                    <blockquote>For example: var rides = [Space Mountain, Dumbo, Star Tours, Splash Mountain, Jungle Cruise, Teacups]; rides.length = 5</blockquote>
+<br>Lets do some fun examples using the array we have already created.<br>
+Add another disneyland ride to the array<input type="text" id="newRide"><button type="button" onclick="addRide()">Add Ride</button>
+<br>Here is the new list of rides we plan to go on during our next vacation:
+<div id="ridesArrayDiv"></div>
+We just found out that the Jungle Cruise ride will be closed for rennovations. Too bad! Lets change it to "Pirates" since the Pirates ride is fun too.
+<button type="button" onclick="addPirates()">Switch Rides</button><br>
+Here is our updated list of rides:
+<div id="updatedRidesDiv"></div>
+           </p>
     <hr>
     <!-- Associative Arrays-->
     <h3> Associative Arrays</h3>
