@@ -65,11 +65,16 @@
 
             </nav>
             <main>
-                <h2>Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays, Associative Arrays</h2>
+                <h2>Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, <br>Arrays, Associative Arrays</h2>
             <!---All about functions--->
-                <h3> Functions </h3>
+                <h3> Functions, Variables and Parameters </h3>
                 <p>
-                Functions are the smallest part of a program that perform an action. There are many different types of functions. On this page you will see functions used to showcase understanding of Loops, Conditional Statements, and Arrays. All functions follow the same format and have the same basic parts.<br>
+                Functions are the smallest part of a program that perform an action. There are many different types of functions. On this page you will see functions used to showcase understanding of Loops, Conditional Statements, and Arrays. Before we get too far into functions we need to explain variables and parameters. All programs use variables and parameters to contain values that the program will need.<br>
+                    <blockquote><b>Variable</b> - we are used to thinking about variables in math as a letter substituting for a number. In programming it is a little broader than that. A variable is basically a box that contains something. It could be a number, text, or something else. We can define a variable using this format.
+                    <blockquote>var variableName = "value";</blockquote>
+                        The keyword var lets the computer know we are creating a new box. The = means that we are putting something in the box. If you think about variables like this it will be easier when we define variables with functions, strings, or even lists.<br></blockquote>
+                <blockquote><b>Parameters</b> - are used to identify which variables will be used in the function. Think about variables as doors into a function. The doors are labeled. Once information goes through the door it can be used in the function. It also lets the program pass information into the function. </blockquote>
+                    <br>All functions follow the same format and have the same basic parts.<br>
                 <blockquote>function functionName(<i>parameter1, parameter2,...</i>){
                         <blockquote>
                     statements; <br>
@@ -171,6 +176,14 @@ Here is our updated list of rides:
     <h3> Associative Arrays</h3>
     <p>
         Associative Arrays are arrays that use names instead of numbers as an index. This can cause all sorts of problems. JavaScript does not accept named arrays, instead use an Object.
+        <br> An associative array would look like this:
+        <blockquote>
+            var rideArray [name: "Space Mountain", location: "Tomorrowland", type: "Thrill", heightReq: "40"]; </blockquote><br>
+            To access the information we could search with the named location instead of having to know the number in the array. <br>
+            <blockquote>rideArray[type] = "Thrill";<br>
+            rideArray[location] = "Tomorrowland";
+</blockquote>
+Again, this type of Array is not supported in JavaScript. You can only use numbered Arrays.
     </p>
             </main>
             <footer>
