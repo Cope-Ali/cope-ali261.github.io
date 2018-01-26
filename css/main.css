@@ -36,10 +36,16 @@ header, footer, footer a {
     background-color:darkslategrey;
     color: whitesmoke;
 }
+
 nav {
     text-align: center;
     background-color: antiquewhite;
     color: whitesmoke;
+}
+
+nav a{
+    padding: 10px;
+    margin: 10px;
 }
 
 footer {

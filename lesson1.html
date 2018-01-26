@@ -4,64 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> CIT 261 JavaScript - Loops, Conditional Statements, Functions, Arrays | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays, Associative Arrays documentation site to showcase lesson mastery for AliCope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+        <meta name="description" content=" Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, Arrays, Associative Arrays documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
         <link rel="stylesheet" href="css/main.css">
-        <script type = "text/javascript">
-            // times table function. accepts a times table number and table size from user and displays the times table using a while loop//
-
-            function timesTable(timesTableNum, tableSize){
-                var timesTableNum = parseInt(document.getElementById("timesTableNumInput").value);
-                var tableSize = parseInt(document.getElementById("timesTableSizeInput").value);
-                var ans = 0;
-                var i = 0;
-                var output = "";
-                while (i<=tableSize){
-                    ans = timesTableNum*i;
-                    output += timesTableNum + " x " + i + " = " + ans + "<br>";
-                    i++;
-                }
-                document.getElementById("timesTableDiv").innerHTML = output;
-            }
-
-        // Can you Ride function. Determine if a rider can ride space mountain by themselves. Conditions=Must be 7 and 40 in
-            function canRide(age,height){
-                var age = parseInt(document.getElementById("riderAge").value);
-                var height = parseInt(document.getElementById("riderHeight").value);
-                var output = "";
-                     if (age >= 7 && height >= 40){
-                         output = "Hooray! You can ride Space Mountain by yourself!";
-                     }
-                    else if (height >= 40){
-                        output = "Not quite old enough, but don't give up! You can still ride with another rider who is 14 or older!";
-                    }
-                    else {
-                        output = "I am sorry you must be over 40 inches to ride, and 7 or older to ride by yourself";
-                    }
-                document.getElementById("rideDiv").innerHTML = output;
-            }
-            var rides = new Array(6);
-            var rides = ["Space Mountain", " Dumbo", " Star Tours", " Splash Mountain", " Jungle Cruise", " Teacups"];
-            function addRide(){
-                newArrayRide = document.getElementById("newRide").value;
-                rides.push(newArrayRide);
-                document.getElementById("ridesArrayDiv").innerHTML = rides.toString();
-            }
-            function addPirates(){
-                rides[4] = "Pirates";
-                document.getElementById("updatedRidesDiv").innerHTML = rides.toString();
-            }
-        </script>
-              </head>
+    </head>
         <body>
             <header>
                 <h1> Ali Cope</h1>
             </header>
             <nav>
-                <a href="/cope-ali261.github.io/">|  Home  | </a>
-                <a href="#">|  Next Lesson | </a>
-                <a href="#loops">|  Loops  |</a>
-                <a href="#condState">|  Conditional Statements  |</a>
-                <a href="#array">|  Arrays  |</a>
+                <a href="/cope-ali261.github.io/">Home</a>
+                <a href="lesson2.html">Next Lesson</a>
+                <a href="#loops">Loops</a>
+                <a href="#condState">Conditional Statements</a>
+                <a href="#array">Arrays</a>
+                <a href="#assocarray">Associative Arrays</a>
 
             </nav>
             <main>
@@ -173,7 +129,7 @@ Here is our updated list of rides:
            </p>
     <hr>
     <!-- Associative Arrays-->
-    <h3> Associative Arrays</h3>
+    <h3><a name="assocarray"></a> Associative Arrays</h3>
     <p>
         Associative Arrays are arrays that use names instead of numbers as an index. This can cause all sorts of problems. JavaScript does not accept named arrays, instead use an Object.
         <br> An associative array would look like this:
@@ -187,7 +143,8 @@ Again, this type of Array is not supported in JavaScript. You can only use numbe
     </p>
             </main>
             <footer>
-                <p>&copy Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+                <p>&copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
             </footer>
-        </body>
+<script src="js/lesson1.js"></script>
+</body>
         </html>
