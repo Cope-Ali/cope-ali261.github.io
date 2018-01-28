@@ -29,29 +29,6 @@ function addMethod() {
     document.getElementById("methoddiv").innerHTML=output;
 }
 
-// create new phone model using galaxyx as a prototype
-//function createPrototype()
-
-var galaxys9=Object.create(galaxyx);
-
-//display prototype
-function displayObjectB() {
-
-    output = Object.values(galaxys9);
-    document.getElementById("prototypediv").innerHTML=output;
-}
-
-//change the value of model to GalaxyS9
-function changeModel() {
-    galaxys9.model = "GalaxyS9";
-}
-
-//Display function with changed model
-function displayChangedModel() {
-    output = Object.values(galaxys9);
-    document.getElementById("changedmodeldiv").innerHTML=output;
-}
-
 //Display all objects
 function displayAllObjects() {
     output = Object.values(galaxyx) + "<br>" + Object.values(iphonex) + "<br>" + Object.values(galaxys9);
