@@ -1,98 +1,130 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CIT 261 JavaScript - Object Creation Functions, Inheritance, Properties, Methods, Instantiation | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 2 - JavaScript - Object Creation, Properties, Methods, Inheritance, Instantiation documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-        <link rel="stylesheet" href="css/main.css">
-        <script type = "text/javascript">
-        </script>
-    </head>
-    <body>
-        <header>
-            <h1> Ali Cope</h1>
-        </header>
-        <nav>
-            <a href="/cope-ali261.github.io/">Home</a>
-            <a href="#">Next Lesson</a>
-            <a href="#creation">Object Creation</a>
-            <a href="#methods">Methods</a>
-            <a href="#inheritance">Inheritance</a>
-            <a href="#instantiation">Instantiation</a>
 
-        </nav>
-        <main>
-            <h2>Lesson 2 - JavaScript - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
-            <h3> Properties</h3>
-            <p>
-                Objects are basically a collection of properties. A property is made up of a key (name) and a value. If you think of a dictionary as the object, the term would be the key and the definition would be the value. Properties are used to define the characteristics of the object.
-                <br> We use dot-notation to access the property of an object.
-                <blockquote>
-            objectName.propertyName
-            </blockquote>
-            *** Notice that both the objectName and the propertyName are camel case letting us know that they are both case sensitive. ***<br>
-            Adding new properties to an object is simple. We use the dot-notation structure and assign the property a value.
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 JavaScript - Object Creation Functions, Inheritance, Properties, Methods, Instantiation | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 2 - JavaScript - Object Creation, Properties, Methods, Inheritance, Instantiation documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="#">Next Lesson</a>
+        <a href="#creation">Object Creation</a>
+        <a href="#methods">Methods</a>
+        <a href="#inheritance">Inheritance</a>
+        <a href="#instantiation">Instantiation</a>
+
+    </nav>
+    <main>
+        <h2>Lesson 2 - JavaScript - Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
+        <h3> Properties</h3>
+        <p>
+            Objects are basically a collection of properties. A property is made up of a key (name) and a value. If you think of a dictionary as the object, the term would be the key and the definition would be the value. Properties are used to define the characteristics of the object.
+            <br> We use dot-notation to access the property of an object.
             <blockquote>
-            var disneyMovies = new Object ();<br>
-                disneyMovies.title = "The Lion King";<br>
-                disneyMovies.rating = "G";<br>
-                disneyMovies.year = 1994;<br>
-                disneyMovies.character;
+                objectName.propertyName
             </blockquote>
-            *** Notice we didn't assign a value to "character" this will be "undefined" in the object, not "null"<br>
-            All object properties are strings or converted to a string. The "year" was 1994, but it will be stored in the disneyMovies object as a string.<br>
-            </p>
+            *** Notice that both the objectName and the propertyName are camel case letting us know that they are both case sensitive. ***<br> Adding new properties to an object is simple. We use the dot-notation structure and assign the property a value.
+            <blockquote>
+                var disneyMovies = new Object ();<br> disneyMovies.title = "The Lion King";<br> disneyMovies.rating = "G";<br> disneyMovies.year = 1994;<br> disneyMovies.character;
+            </blockquote>
+            *** Notice we didn't assign a value to "character" this will be "undefined" in the object, not "null"<br> All object properties are strings or converted to a string. The "year" was 1994, but it will be stored in the disneyMovies object as a string.<br>
+        </p>
         <hr>
         <!--- Object Creation --->
         <h3><a name="creation"></a> Creation </h3>
         <p> When we were discussing properties we made an new object using the "new" operator. There are other ways to create an object.
             <h4>Object Initializers</h4>
-        Object initializers, which are sometimes called Object Literal, use the following syntax to create objects:
-        <blockquote>
-        var objectName = { property1: value 1,
-            <blockquote>property2: value2, <br>
-                propertyN: valueN };
-            </blockquote></blockquote>
-
-This is the same as writing it this way:
+            Object initializers, which are sometimes called Object Literal, use the following syntax to create objects:
             <blockquote>
-            var objectName = { property1: value1, property2: value2, propertyN: valueN };</blockquote>
+                var objectName = { property1: value 1,
+                <blockquote>property2: value2, <br> propertyN: valueN };
+                </blockquote>
+            </blockquote>
 
+            This is the same as writing it this way:
+            <blockquote>
+                var objectName = { property1: value1, property2: value2, propertyN: valueN };</blockquote>
 
-           </p>
-    <hr>
-    <!---- Methods ---->
-    <h3><a name="methods"></a> Methods </h3>
-    <p>
+        </p>
+        <hr>
+        <!---- Methods ---->
+        <h3><a name="methods"></a> Methods </h3>
+        <p>Methods are actions or functions that can be performed by an object. They are stored in an object the same way that a property is, but instead of a value, a function is run.
+            <blockquote>
+                var person = {name: "Susan", gender: "f", age: "40", nameage: "function(){return this.name + this.age}}
+            </blockquote>
 
-    </p>
-<hr>
-<!---- Inheritance --->
-<h3><a name="inheritance"></a>Inheritance</h3>
-<p>
+        </p>
+        <hr>
+        <!---- Inheritance --->
+        <h3><a name="inheritance"></a>Inheritance</h3>
+        <p> All objects in JavaScript have basic properties that are inherited from the the "prototype" object. Objects can inherit all of the properties and behaviors of the parent object. First the prototype object is created, then new instances of the object can be made. That object can then be changed, adding new properties or methods and then have new objects created from it. It allows code to be reused without having to be written again. <br> There are two places this is especially helpful. This first is to combine two objects so you can access all of the properies from the first and second, from the second object.
+            <blockquote>
+                var cookies = {one: "Chocolate Chip", two: "Snickerdoodle", three: "Peanutbutter"};<br> var desserts = {three: "Brownies", four: "Cheesecake", five: "Ice Cream"};<br> Object.setPrototypeOf(desserts, cookies);<br>
+            </blockquote>
+            So now desserts has all the properties of desserts and cookies. Value "three" was present in both and remains "Brownies" for desserts. Here are the properties of desserts:
+            <ul>
+                <li> desserts.one: "Chocolate Chip"</li>
+                <li>desserts.two: "Sinckerdoodles"</li>
+                <li>desserts.three: "Brownies"</li>
+                <li>desserts.four: "Cheesecake"</li>
+                <li>desserts.five: "Ice Cream"</li>
+            </ul>
+            Desserts now has all of its own properties and has inherited the properties of its parent.<br> The second is to create a child object from a parent object. Lets show how this would work with a family.
+            <blockquote>
+                var bobSmith = {lastname: "Smith", firstname: "Bob"};<br><br> var sueSmith = Object.create(bobSmith);<br> sueSmith.firstname = "Sue";
+            </blockquote>
+            While this may seem hardly worth the effort with such a small object. It can be very helpful when dealing with large objects with a lot of properties.
+        </p>
+        <hr>
+        <!-- instantiation-->
+        <h3><a name="instantiation"></a>Instantiation</h3>
+        <p>
+            Instantiation gives us another way to create objects using a constructor function. This way creates a function that can be used to create new arrays with the same properties. Here is an example using an address.
+            <blockquote>
+                function Address(name, street, city, state, zip){<br> this.name = name; <br> this.street = street; <br> this.city = city;<br> this.state = state;<br> this.zip = zip;<br> }
+            </blockquote>
+            Notice that the function name "Address" is capitalized. This is intentional and typical for this type of function. We can create a new object of this type using the keyword new.
+            <blockquote>
+                var jillBrownAddress = new Address("Jill Brown", "123 main", "Riverside", "CA","93745"); <br> var bobKentAddress = new Address("Bob Kent", "47 Orange Blvd", "Beaver", "UT, "84073");
+            </blockquote>
+            We can also use objects as values within other objects. For example if we were a business we might need to have the address array as part of a larger object.
+            <blockquote>
+                function Employee(department, position, address){<br> this.department = department; <br> this.position = position; <br> this.address = address;<br>
+                <br> var employee1 = new Employee ("sales", "manager", "jillBrownAddress");<br> var employee2 = new Employee ("finance", "accountant", "bobKentAddress")<br> }
+            </blockquote>
+        </p>
+        <hr>
+        <h3><a name="examples"></a>Examples</h3>
+        <p>
+            Create two objects for latest cell phones<br> Samsung GalaxyX released in 2018 <br> Apple iphoneX released in 2017 <br>
+            <button type="button" onclick="displayObject()">Display</button><br>
+            <div id="displayObject1"></div><br> Now lets create a method for the object that will show the make and model together. We can call this display and show it by calling
+            <italic> galaxyx.display </italic> or
+            <italic>iphonex.display</italic>
+            <button type="button" onclick="addMethod()">Add Method and Display</button><br>
+            <div id="methoddiv"></div><br> Samsung just announced a new cell phone the Galaxy S9. Lets create that object using the other Samsung phone as a prototype.
+            <italic>var galaxys9 = Ob <br>
+                <button type="button" onclick="displayObject2()">Create from Prototype</button><br>
+                <div id="prototypediv"></div><br> You can see that this created a new object that has all the same values. We can change the model value to GalaxyS9 by using
+                <italic> galaxys9.model = "GalaxyS9" </italic><button type="button" onclick="displayChangedModel()">Change Model</button>
+                <div id="changedmodeldiv"></div><br> Here are all of the objects that we have created now <button type="button" onclick="displayAllObjects()">Display All</button><br>
+                <div id="displayalldiv"></div>
 
-</p>
-<hr>
-<!-- instantiation-->
-    <h3><a name="instantiation"></a>Instantiation</h3>
-<p>
-
-</p>
-</main>
-<footer>
-    <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-</footer>
+        </p>
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+    <script src="js/lesson2.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-    </body>
