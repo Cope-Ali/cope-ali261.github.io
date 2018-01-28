@@ -107,13 +107,13 @@
         <p>
             Create two objects for latest cell phones<br> Samsung GalaxyX released in 2018 <br> Apple iphoneX released in 2017 <br>
             <button type="button" onclick="displayObject()">Display</button><br>
-            <div id="displayObject1"></div><br> Now lets create a method for the object that will show the make and model together. We can call this display and show it by calling
+            <div id="displayobj"></div><br> Now lets create a method for the object that will show the make and model together. We can call this display and show it by calling
             <italic> galaxyx.display </italic> or
             <italic>iphonex.display</italic>
             <button type="button" onclick="addMethod()">Add Method and Display</button><br>
             <div id="methoddiv"></div><br> Samsung just announced a new cell phone the Galaxy S9. Lets create that object using the other Samsung phone as a prototype.
-            <italic>var galaxys9 = Ob <br>
-                <button type="button" onclick="displayObject2()">Create from Prototype</button><br>
+            <italic>var galaxys9 = Object.create(galaxyx) <br>
+                <button type="button" onclick="displayObjectB()">Create from Prototype</button><br>
                 <div id="prototypediv"></div><br> You can see that this created a new object that has all the same values. We can change the model value to GalaxyS9 by using
                 <italic> galaxys9.model = "GalaxyS9" </italic><button type="button" onclick="displayChangedModel()">Change Model</button>
                 <div id="changedmodeldiv"></div><br> Here are all of the objects that we have created now <button type="button" onclick="displayAllObjects()">Display All</button><br>
