@@ -31,6 +31,6 @@ function addMethod() {
 
 //Display all objects
 function displayAllObjects() {
-    output = Object.values(galaxyx) + "<br>" + Object.values(iphonex) + "<br>" + Object.values(galaxys9);
+    output = Object.values(galaxyx) + "<br>" + Object.values(iphonex);
     document.getElementById("displayalldiv").innerHTML=output;
 }
