@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -41,7 +41,6 @@
                 <li> Square brackets onld arrays</li>
                 <li> Names require double quote <em>"</em>name<em>"</em>:<em>"</em>value<em>"</em></li>
             </ul>
-
         </p>
         <h4>JSON vs JavaScript</h4>
         <img src="cope-ali261.github.io/img/JSONcomp.jpg" alt="chart comparing data types between JSON and JavaScript">
@@ -83,10 +82,9 @@
                 </li>
             </ul>
         </p>
-
         <hr>
         <!--- Parse --->
-        <h3><a name="parse"></a> JSON Parse</h3>
+        <h3><a id="parse"></a> JSON Parse</h3>
         <p> Data coming from a web server is always in a string format. Use parse to convert string into JavaScript Object.
             <h4>Syntax</h4>
             JSON.parse()
@@ -116,12 +114,12 @@
                 </li>
 
             </ul>
-    <button type="button" onclick="displayParse()">Display JavaScript Object</button><br>
-    <div id="parseDiv"></div>
-    </p>
+            <button type="button" onclick="displayParse()">Display JavaScript Object</button><br>
+            <div id="parseDiv"></div>
+        </p>
         <hr>
         <!---- Sringify ---->
-        <h3><a name="stringify"></a> JSON Stringify </h3>
+        <h3><a id="stringify"></a> JSON Stringify </h3>
         <p>In order to send data to a browser it must be in string format. To convert a JavaScript object into a string we use stringify.
         </p>
         <h4> Syntax</h4>
@@ -137,11 +135,11 @@
                 </ul>
             </li>
         </ul>
-<button type="button" onclick="displayStringify()">Display JSON Object</button><br>
-<div id="stringifyDiv"></div>
-<hr>
+        <button type="button" onclick="displayStringify()">Display JSON Object</button><br>
+        <div id="stringifyDiv"></div>
+        <hr>
         <!---- Exceptions --->
-        <h3><a name="exceptions"></a>Exceptions Dates and Functions</h3>
+        <h3><a id="exceptions"></a>Exceptions Dates and Functions</h3>
         <p>
             Dates and functions also must be converted to strings in order to be passed to a server. When dates and functions are passed back from a server we can use a reviver.
         </p>
@@ -174,13 +172,13 @@
             </li>
         </ul>
         This will transform the leaseDate value from a string back into a date.<br>
-<button type="button" onclick="displayDate()">Display JavaScript Object with Date</button><br>
-<div id="dateDiv"></div>
+        <button type="button" onclick="displayDate()">Display JavaScript Object with Date</button><br>
+        <div id="dateDiv"></div>
     </main>
     <footer>
         <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
     </footer>
-<script src="js/lesson3.js"></script>
+    <script src="js/lesson3.js"></script>
 </body>
 
 </html>

@@ -16,8 +16,8 @@ var residentStringB = JSON.stringify(resident);
 //convert date from JSON object into date in JavaScript Object
 var residentObjectB = JSON.parse(residentStringB, function(key,value){
     if(key=="leaseDate"){
-        return new Date(value);
-    else
+        return new Date(value);}
+    else{
         return value;
     }
 
