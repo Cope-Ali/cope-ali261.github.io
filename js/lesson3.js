@@ -1,5 +1,5 @@
 //create JavaScript Object
-var residentObject = {"name":"Mary", "apt":36};
+var residentObject = {name:"Mary", apt:36};
 
 //convert to JSON object with JSON.stringify
 var residentString = JSON.stringify(resident);
