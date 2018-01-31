@@ -116,62 +116,71 @@
                 </li>
 
             </ul>
-        </p>
+    <button type="button" onclick="displayParse()">Display JavaScript Object</button><br>
+    <div id="parseDiv"></div>
+    </p>
         <hr>
         <!---- Sringify ---->
         <h3><a name="stringify"></a> JSON Stringify </h3>
         <p>In order to send data to a browser it must be in string format. To convert a JavaScript object into a string we use stringify.
-</p>
-<h4> Syntax</h4>
-<p>
-   JSON.stringify()
-</p>
-<h4>Example</h4>
-<ul>
-<li>JavaScript Object to String
-    <ul>
-        <li>var residentString = JSON.stringify(resident);</li>
-    <li>residentString = "{"name":"Mary", "apt":36}'</li>
-    </ul>
-    </li>
-</ul>
+        </p>
+        <h4> Syntax</h4>
+        <p>
+            JSON.stringify()
+        </p>
+        <h4>Example</h4>
+        <ul>
+            <li>JavaScript Object to String
+                <ul>
+                    <li>var residentString = JSON.stringify(resident);</li>
+                    <li>residentString = "{"name":"Mary", "apt":36}'</li>
+                </ul>
+            </li>
+        </ul>
+<button type="button" onclick="displayStringify()">Display JSON Object</button><br>
+<div id="stringifyDiv"></div>
 <hr>
         <!---- Exceptions --->
         <h3><a name="exceptions"></a>Exceptions Dates and Functions</h3>
         <p>
-Dates and functions also must be converted to strings in order to be passed to a server. When dates and functions are passed back from a server we can use a reviver.
+            Dates and functions also must be converted to strings in order to be passed to a server. When dates and functions are passed back from a server we can use a reviver.
         </p>
-<h4>Reviver</h4>
-<p>
-A reviver is used to transform the value after it is parsed but before it is returned. All of the properties (starting with the most nested) and the value are individually run through the reviver. The reviver will return the value unless the reviver function returns "undefined" the property is deleted from the object. If the receiver transforms only some of the values, be sure to indicate that all other values be returned as-is so they won't be deleted from the object.
-</p>
-<h4>Syntax</h4>
-JSON.parse(text[, reviver])<br>
-<em>text</em> the string to parse as JSON<br>
-<em>reviver</em> this dictates how the value originlly produced by parsing is transformed before being returned.
-<h4>Examples</h4>
-<ul>
-<li>
-    <ul>
-    <li>
-        var residentString = '{"name":"Mary", "apt":36, "leaseDate":"2012-10-15"}
-        </li>
-    <li>var resident = JSON.parse(residentString, function (key,value){
+        <h4>Reviver</h4>
+        <p>
+            A reviver is used to transform the value after it is parsed but before it is returned. All of the properties (starting with the most nested) and the value are individually run through the reviver. The reviver will return the value unless the reviver function returns "undefined" the property is deleted from the object. If the receiver transforms only some of the values, be sure to indicate that all other values be returned as-is so they won't be deleted from the object.
+        </p>
+        <h4>Syntax</h4>
+        JSON.parse(text[, reviver])<br>
+        <em>text</em> the string to parse as JSON<br>
+        <em>reviver</em> this dictates how the value originlly produced by parsing is transformed before being returned.
+        <h4>Examples</h4>
         <ul>
-        <li>if (key==="leaseDate"){</li>
-        <li>return new Date(value);</li>
-        <li>} </li>
-        <li>else{</li>
-        <li>return value;</li>
-            <li>}}),</li></ul></li>
-    </ul>
-    </li>
-</ul>
-This will transform the leaseDate value from a string back into a date.
+            <li>
+                <ul>
+                    <li>
+                        var residentString = '{"name":"Mary", "apt":36, "leaseDate":"2012-10-15"}
+                    </li>
+                    <li>var resident = JSON.parse(residentString, function (key,value){
+                        <ul>
+                            <li>if (key==="leaseDate"){</li>
+                            <li>return new Date(value);</li>
+                            <li>} </li>
+                            <li>else{</li>
+                            <li>return value;</li>
+                            <li>}}),</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        This will transform the leaseDate value from a string back into a date.<br>
+<button type="button" onclick="displayDate()">Display JavaScript Object with Date</button><br>
+<div id="dateDiv"></div>
     </main>
     <footer>
-        <p> &copy;    Ali Cope    CA    <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
     </footer>
+<script src="js/lesson3.js"></script>
 </body>
 
 </html>
