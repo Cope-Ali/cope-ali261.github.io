@@ -25,16 +25,19 @@ var residentObjectB = JSON.parse(residentStringB, function(key,value){
 
 //display JSON object
 function displayParse(){
-    document.getElementById(parseDiv).innerHTML=resident;
+    var output = resident
+    document.getElementById(parseDiv).innerHTML=output;
 }
 
 //display JavaScript object
 function displayStringify(){
-    document.getElementById(stringifyDiv).innerHTML=residentString;
+    var output = residentString
+    document.getElementById(stringifyDiv).innerHTML=output;
 }
 
 //display JavaScript object with date
 function displayDate(){
-    document.getElementById(dateDiv).innerHTML=residentObjectB;
+    var output = residentObjectB
+    document.getElementById(dateDiv).innerHTML=output;
 }
 
