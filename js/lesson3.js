@@ -2,7 +2,7 @@
 var residentObject = {name:"Mary", apt:36};
 
 //convert to JSON object with JSON.stringify
-var residentString = JSON.stringify(resident);
+var residentString = JSON.stringify(residentObject);
 
 //convert from JSON object into JavaScript object with JSON.parse
 var resident = JSON.parse(residentString);
