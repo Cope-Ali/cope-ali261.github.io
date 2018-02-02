@@ -34,7 +34,7 @@ function displayParse(){
     var resident = JSON.parse(residentString);
 
     var output = resident;
-    document.getElementById(parseDiv).innerHTML=output;
+    document.getElementById("parseDiv").innerHTML=output;
 }
 
 //display JavaScript object
@@ -46,7 +46,7 @@ function displayStringify(){
     var residentString = JSON.stringify(residentObject);
 
     var output = residentString;
-    document.getElementById(stringifyDiv).innerHTML=output;
+    document.getElementById("stringifyDiv").innerHTML=output;
 }
 
 //display JavaScript object with date
@@ -70,6 +70,6 @@ function displayDate(){
 
     })
     var output = residentObjectB;
-    document.getElementById(dateDiv).innerHTML=output;
+    document.getElementById("dateDiv").innerHTML=output;
 }
 
