@@ -1,38 +1,38 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> CIT 261 JSON - Parse, Stringify | Ali Cope | BYU-Idaho</title>
-    <meta name="description" content=" Lesson 3 - JSON - Parse, Stringify documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-    <link rel="stylesheet" href="css/lesson3.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> CIT 261 JSON - Parse, Stringify | Ali Cope | BYU-Idaho</title>
+        <meta name="description" content=" Lesson 3 - JSON - Parse, Stringify documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+        <link rel="stylesheet" href="css/lesson3.css">
+    </head>
 
-<body>
-    <header>
-        <h1> Ali Cope</h1>
-    </header>
-    <nav>
-        <a href="/cope-ali261.github.io/">Home</a>
-        <a href="#">Next Lesson</a>
-        <a href="#parse">Parse</a>
-        <a href="#stringify">Stringify</a>
-        <a href="#exceptions">Exceptions</a>
-    </nav>
-    <main>
-        <h2>Lesson 3 - JSON - Parse, Stringify</h2>
-        <h3> JSON - What and Why</h3>
-        <h4> What</h4>
-        <p>
-            JSON stands for <em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation. It is a syntax for soring and exchanging data. JSON is essentially text, written in JavaScript object notation. It is a lightweight data interchange format that is self describing and easy to understand. It also has the advantage of being language independant so it can be read and used by ANY programming language.
-        </p>
-        <h4>Why</h4>
-        <p>
-            All data exchanged beteen the browser and server can only be text. JSON can be used to convert JavaScript to text or text in JSON format to JavaScript. This allows data to be worked with as JavaScript objects without complicated parsing or translations.
-        </p>
-        <h4>Syntax</h4>
-        <p>JSON Syntax Rules:
+    <body>
+        <header>
+            <h1> Ali Cope</h1>
+        </header>
+        <nav>
+            <a href="/cope-ali261.github.io/">Home</a>
+            <a href="#">Next Lesson</a>
+            <a href="#parse">Parse</a>
+            <a href="#stringify">Stringify</a>
+            <a href="#exceptions">Exceptions</a>
+        </nav>
+        <main>
+            <h2>Lesson 3 - JSON - Parse, Stringify</h2>
+            <h3> JSON - What and Why</h3>
+            <h4> What</h4>
+            <p>
+                JSON stands for <em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation. It is a syntax for soring and exchanging data. JSON is essentially text, written in JavaScript object notation. It is a lightweight data interchange format that is self describing and easy to understand. It also has the advantage of being language independant so it can be read and used by ANY programming language.
+            </p>
+            <h4>Why</h4>
+            <p>
+                All data exchanged beteen the browser and server can only be text. JSON can be used to convert JavaScript to text or text in JSON format to JavaScript. This allows data to be worked with as JavaScript objects without complicated parsing or translations.
+            </p>
+            <h4>Syntax</h4>
+            <p>JSON Syntax Rules:</p>
             <ul>
                 <li> Data is in name/value pairs</li>
                 <li>name and value pairs are seperated by colons "name"<em>:</em>"value" </li>
@@ -41,11 +41,9 @@
                 <li> Square brackets onld arrays</li>
                 <li> Names require double quote <em>"</em>name<em>"</em>:<em>"</em>value<em>"</em></li>
             </ul>
-        </p>
-        <h4>JSON vs JavaScript</h4>
-    <img src= "img/JSONcomp.jpg" width="500" height="" alt="chart comparing data types between JSON and JavaScript">
-        <h4>JSON Data Types</h4>
-        <p>
+            <h4>JSON vs JavaScript</h4>
+            <img src= "img/JSONcomp.jpg" width="500" height="auto" alt="chart comparing data types between JSON and JavaScript">
+            <h4>JSON Data Types</h4>
             <ul>
                 <li>String - double quotes
                     <ul>
@@ -81,13 +79,12 @@
                     </ul>
                 </li>
             </ul>
-        </p>
-        <hr>
-        <!--- Parse --->
-        <h3><a id="parse"></a> JSON Parse</h3>
-        <p> Data coming from a web server is always in a string format. Use parse to convert string into JavaScript Object.
+            <hr>
+            <!--- Parse --->
+            <h3><a id="parse"></a> JSON Parse</h3>
+            <p> Data coming from a web server is always in a string format. Use parse to convert string into JavaScript Object.</p>
             <h4>Syntax</h4>
-            JSON.parse()
+            <p>JSON.parse()</p>
             <h4>Example</h4>
             <ul>
                 <li> Text from Server
@@ -116,69 +113,68 @@
             </ul>
             <button type="button" onclick="displayParse()">Display JavaScript Object</button><br>
             <div id="parseDiv"></div>
-        </p>
-        <hr>
-        <!---- Sringify ---->
-        <h3><a id="stringify"></a> JSON Stringify </h3>
-        <p>In order to send data to a browser it must be in string format. To convert a JavaScript object into a string we use stringify.
-        </p>
-        <h4> Syntax</h4>
-        <p>
-            JSON.stringify()
-        </p>
-        <h4>Example</h4>
-        <ul>
-            <li>JavaScript Object to String
-                <ul>
-                    <li>var residentString = JSON.stringify(resident);</li>
-                    <li>residentString = "{"name":"Mary", "apt":36}'</li>
-                </ul>
-            </li>
-        </ul>
-        <button type="button" onclick="displayStringify()">Display JSON Object</button><br>
-        <div id="stringifyDiv"></div>
-        <hr>
-        <!---- Exceptions --->
-        <h3><a id="exceptions"></a>Exceptions Dates and Functions</h3>
-        <p>
-            Dates and functions also must be converted to strings in order to be passed to a server. When dates and functions are passed back from a server we can use a reviver.
-        </p>
-        <h4>Reviver</h4>
-        <p>
-            A reviver is used to transform the value after it is parsed but before it is returned. All of the properties (starting with the most nested) and the value are individually run through the reviver. The reviver will return the value unless the reviver function returns "undefined" the property is deleted from the object. If the receiver transforms only some of the values, be sure to indicate that all other values be returned as-is so they won't be deleted from the object.
-        </p>
-        <h4>Syntax</h4>
-        JSON.parse(text[, reviver])<br>
-        <em>text</em> the string to parse as JSON<br>
-        <em>reviver</em> this dictates how the value originlly produced by parsing is transformed before being returned.
-        <h4>Examples</h4>
-        <ul>
-            <li>
-                <ul>
-                    <li>
-                        var residentString = '{"name":"Mary", "apt":36, "leaseDate":"2012-10-15"}
-                    </li>
-                    <li>var resident = JSON.parse(residentString, function (key,value){
-                        <ul>
-                            <li>if (key==="leaseDate"){</li>
-                            <li>return new Date(value);</li>
-                            <li>} </li>
-                            <li>else{</li>
-                            <li>return value;</li>
-                            <li>}}),</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        This will transform the leaseDate value from a string back into a date.<br>
-        <button type="button" onclick="displayDate()">Display JavaScript Object with Date</button><br>
-        <div id="dateDiv"></div>
-    </main>
-    <footer>
-        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-    </footer>
-    <script src="js/lesson3.js"></script>
-</body>
+            <hr>
+            <!---- Sringify ---->
+            <h3><a id="stringify"></a> JSON Stringify </h3>
+            <p>In order to send data to a browser it must be in string format. To convert a JavaScript object into a string we use stringify.
+            </p>
+            <h4> Syntax</h4>
+            <p>
+                JSON.stringify()
+            </p>
+            <h4>Example</h4>
+            <ul>
+                <li>JavaScript Object to String
+                    <ul>
+                        <li>var residentString = JSON.stringify(resident);</li>
+                        <li>residentString = "{"name":"Mary", "apt":36}'</li>
+                    </ul>
+                </li>
+            </ul>
+            <button type="button" onclick="displayStringify()">Display JSON Object</button><br>
+            <div id="stringifyDiv"></div>
+            <hr>
+            <!---- Exceptions --->
+            <h3><a id="exceptions"></a>Exceptions Dates and Functions</h3>
+            <p>
+                Dates and functions also must be converted to strings in order to be passed to a server. When dates and functions are passed back from a server we can use a reviver.
+            </p>
+            <h4>Reviver</h4>
+            <p>
+                A reviver is used to transform the value after it is parsed but before it is returned. All of the properties (starting with the most nested) and the value are individually run through the reviver. The reviver will return the value unless the reviver function returns "undefined" the property is deleted from the object. If the receiver transforms only some of the values, be sure to indicate that all other values be returned as-is so they won't be deleted from the object.
+            </p>
+            <h4>Syntax</h4>
+            JSON.parse(text[, reviver])<br>
+            <em>text</em> the string to parse as JSON<br>
+            <em>reviver</em> this dictates how the value originlly produced by parsing is transformed before being returned.
+            <h4>Examples</h4>
+            <ul>
+                <li>
+                    <ul>
+                        <li>
+                            var residentString = '{"name":"Mary", "apt":36, "leaseDate":"2012-10-15"}
+                        </li>
+                        <li>var resident = JSON.parse(residentString, function (key,value){
+                            <ul>
+                                <li>if (key==="leaseDate"){</li>
+                                <li>return new Date(value);</li>
+                                <li>} </li>
+                                <li>else{</li>
+                                <li>return value;</li>
+                                <li>}}),</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            This will transform the leaseDate value from a string back into a date.<br>
+            <button type="button" onclick="displayDate()">Display JavaScript Object with Date</button><br>
+            <div id="dateDiv"></div>
+        </main>
+        <footer>
+            <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+        <script src="js/lesson3.js"></script>
+    </body>
 
 </html>
