@@ -19,7 +19,7 @@
             <a href="#parse">Example</a>
         </nav>
         <main>
-            <h2>Lesson 4 - XMLHTTP</h2>
+            <h2>Lesson 4 - XMLHttp Request Object</h2>
             <p>
             To request data from a server you must use an XMLHttpRequest object. All modern browsers have this built in. However you may want to create your own because it allows you to:</p>
                 <ul>
@@ -27,12 +27,19 @@
                     <li>Request or Recieve data from the server after the page has loaded</li>
                     <li>Send data to a server in the background</li>
             </ul>
+            <img src="/img/XMLHttpRequestObject.jpg" width="800" height="auto" alt="example of XMLHttp code with explaination of parts">
+            <hr>
+            <h3> Examples </h3>
+            <p>
+            Pull data from filltext.com using an XMLHttp Request Object. Convert the object from a JSON object into a JavaScript object using JSON.parse</p>
+               <br> <button type="button" onclick="requestDisplay()">Request and Display</button><br>
+                <div id="displayDiv"></div>
 
 </main>
 <footer>
     <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
 </footer>
-<script src="js/lesson3.js"></script>
+<script src="js/lesson4.js"></script>
 </body>
 
 </html>
