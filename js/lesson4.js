@@ -9,6 +9,6 @@ xhttp.onreadystatechange = function (){
         }
     }
 }
-xttp.open("GET", "http://www.filltext.com/?rows=10&firstname={firstName}&lastname={lastName}&email={email}&pretty=true", true);
-    xttp.send();
+xhttp.open("GET", "http://www.filltext.com/?rows=10&firstname={firstName}&lastname={lastName}&email={email}&pretty=true", true);
+    xhttp.send();
 };
