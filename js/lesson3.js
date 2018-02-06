@@ -25,7 +25,7 @@ function displayDate() {
         else {
         return value;}
 })
-    var output = "Name: "+ residentObjectB.name+ ", APT: "+ residentObjectB.apt;+ ", Lease Date: "
+    var output = "Name: "+ residentObjectB.name+ ", APT: "+ residentObjectB.apt+ ", Lease Date: "
         + residentObjectB.leaseDate;
     document.getElementById("dateDiv").innerHTML = output;
 }
