@@ -2,7 +2,8 @@
 //display JSON object
 function displayParse() {
     var resident = JSON.parse('{"name":"Mary", "apt":36}');
-    document.getElementById("parseDiv").innerHTML = resident;
+    var output = "Name: " + resident.name + ", APT: " + resident.apt;
+    document.getElementById("parseDiv").innerHTML = output;
 }
 
 //display JavaScript object
@@ -24,6 +25,7 @@ function displayDate() {
         else {
         return value;}
 })
-    var output = residentObjectB;
+    var output = "Name: "+ residentObjectB.name+ ", APT: "+ residentObjectB.apt;+ ", Lease Date: "
+        + residentObjectB.leaseDate;
     document.getElementById("dateDiv").innerHTML = output;
 }
