@@ -62,28 +62,27 @@ function saveAssocArray() {
 //display Associative array
 function displayAssocArrayValue() {
     var arrayValue = document.getElementById("arrayValueName");
-    if arrayValue == ("NAME" || "Name" || "name") {
+    var value = function convertValue(arrayValue){
+    if (arrayValue == "NAME" || arrayValue == "Name" || arrayValue == "name") {
         arrayValue = "name";
     }
-    if arrayValue == ("FOOD" || "Food" || "food") {
+    else if (arrayValue == "FOOD" || arrayValue == "Food" || arrayValue == "food") {
         arrayValue = "food";
     }
-    if
-    else arrayValue == ("MUSIC" || "Music" || "music") {
+   else if (arrayValue == "MUSIC" || arrayValue == "Music" || arrayValue == "music") {
         arrayValue = "music";
     }
-    if
-    else arrayValue == ("MOVIE" || "Movie" || "movie") {
+    else if(arrayValue == "MOVIE" || arrayValue == "Movie" || arrayValue == "movie") {
         arrayValue = "movie";
     }
-    if
-    else arrayValue == ("INSECT" || "Insect" || "insect") {
+    else if (arrayValue == "INSECT" || arrayValue == "Insect" || arrayValue == "insect") {
         arrayValue = "insect";
     }
     else {
         document.getElementById("assocArrayOutput").innerHTML = "Please enter a vaild catagory."
     }
-    var getArray = localStorage.getItem assocArrayString;
+    return arrayValue}
+    var getArray = localStorage.getItem( "assocArrayString");
     var favoriteArray = [JSON.parse(getArray)]
     var output = favoriteArray.arrayValue;
     document.getElementById("assocArrayOutput").innerHTML = output;
