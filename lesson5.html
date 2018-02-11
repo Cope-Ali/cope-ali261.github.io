@@ -7,29 +7,7 @@
     <title> CIT 261 JSON - Local Storage API | Ali Cope | BYU-Idaho</title>
     <meta name="description" content=" Lesson 5 - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
     <link rel="stylesheet" href="css/lesson3.css">
-    <script type="text/javascript">
-
-
-
-        function saveColor() {
-            if (typeof (Storage) !== "undefined") {
-                var colorIn = document.getElementById('favoriteColor');
-                localStorage.setItem("favColor", colorIn);
-            } else {
-                var output = "I am sorry your browser doesn't support local storage.";
-                document.getElementById("outputColor").innerHTML = output;
-            }
-        }
-
-        function showColor() {
-            var colorOut = localStorage.getItem("favColor");
-            document.getElementById("outputColor").innerHTML = "Favorite Color: " + colorOut;
-        }
-
-
-
-
-    </script>
+    <script src="js/lesson5.js"></script>
 </head>
 
 <body>
@@ -94,7 +72,7 @@
     <footer>
         <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
     </footer>
-    <script src="js/lesson5.js"></script>
+
 </body>
 
 </html>
