@@ -30,11 +30,10 @@ function saveArray() {
 //display array
 function displayArray() {
     var colors = localStorage.getItem colorArrayString;
-    var colorsArray = [JSON.parse (colors);
+    var colorsArray = [JSON.parse (colors)];
     var number = parseFloat(document.getElementById('arrayNum'));
     var output = colorsArray[number];
-    document.getElementById("arrayOutput").innerHTML = output;
-}
+    document.getElementById("arrayOutput").innerHTML = output;}
 
 //Associative Array//
 //save Associative Array
