@@ -20,7 +20,7 @@ function showColor() {
 function saveArray() {
     if (typeof (Storage) !== "undefined") {
         var colorArrayIn = [document.getElementById('colorArray')];
-        var colorArrayString = JSON.stringify (colorArrayIn);
+        var colorArrayString = JSON.stringify(colorArrayIn);
         localStorage.setItem("colorArray", colorArrayString);
     } else {
         var output = "I am sorry your browser doesn't support local storage.";
@@ -29,11 +29,12 @@ function saveArray() {
 }
 //display array
 function displayArray() {
-    var colors = localStorage.getItem colorArrayString;
-    var colorsArray = [JSON.parse (colors)];
+    var colors = localStorage.getItem("colorArrayString");
+    var colorsArray = [JSON.parse(colors)];
     var number = parseFloat(document.getElementById('arrayNum'));
     var output = colorsArray[number];
-    document.getElementById("arrayOutput").innerHTML = output;}
+    document.getElementById("arrayOutput").innerHTML = output;
+}
 
 //Associative Array//
 //save Associative Array
@@ -44,9 +45,15 @@ function saveAssocArray() {
         var musicIn = document.getElementById("music");
         var movieIn = document.getElementById("movie");
         var insectIn = document.getElementById("insect");
-        var array = [name: nameIn, food: foodIn, music: musicIn, movie: movieIn, insect: insectIn];
+        var array = {
+            name: nameIn,
+            food: foodIn,
+            music: musicIn,
+            movie: movieIn,
+            insect: insectIn
+        };
         var assocArrayString = JSON.stringify(array);
-        localStorage.setItem (assocArrayString);
+        localStorage.setItem(assocArrayString);
     } else {
         var output = "I am sorry your browser doesn't support local storage.";
         document.getElementById("assocArrayOutput").innerHTML = output;
@@ -54,7 +61,6 @@ function saveAssocArray() {
 }
 //display Associative array
 function displayAssocArrayValue() {
-    var arrayName = document.getElementById("nameForArray");
     var arrayValue = document.getElementById("arrayValueName");
     if arrayValue == ("NAME" || "Name" || "name") {
         arrayValue = "name";
