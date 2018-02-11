@@ -7,6 +7,25 @@
     <title> CIT 261 JSON - Local Storage API | Ali Cope | BYU-Idaho</title>
     <meta name="description" content=" Lesson 5 - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
     <link rel="stylesheet" href="css/lesson3.css">
+    <script type="text/javascript">
+
+
+
+        function saveColor() {
+            if (typeof (Storage) !== "undefined") {
+                var colorIn = document.getElementById('favoriteColor');
+                localStorage.setItem("favColor", colorIn);
+            } else {
+                var output = "I am sorry your browser doesn't support local storage.";
+                document.getElementById("outputColor").innerHTML = output;
+            }
+        }
+
+
+
+
+
+    </script>
 </head>
 
 <body>
@@ -37,7 +56,11 @@
         </p>
         <section id = "objects">
             <h3>Objects</h3>
-            This first example is an example of creating an API object. We set the itemName and the value. Here you can create your own object and store your favorite color. <br> Favorite Color:<input type="text" id="favoriteColor"><button type="button" onclick="saveColor()">Save Color</button><br> Now we can retrieve your favorite color from local storage. <br> <button type="button" onclick="showColor()">Display Color</button>
+            This first example is an example of creating an API object.
+            We set the itemName and the value. Here you can create your own object and store your favorite color. <br>
+            Favorite Color:<input type="text" id="favoriteColor"><button type="button" onclick="saveColor()">Save Color</button><br>
+            Now we can retrieve your favorite color from local storage. <br>
+            <button type="button" onclick="showColor()">Display Color</button>
             <div id="outputColor"></div>
         </section>
         <section id="arrays">
