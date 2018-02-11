@@ -24,7 +24,7 @@
                 <h2>Lesson 1 - JavaScript - Loops, Conditional Statements, Functions, <br>Arrays, Associative Arrays</h2>
             <!---All about functions--->
                 <h3> Functions, Variables and Parameters </h3>
-                <p>
+                <section>
                 Functions are the smallest part of a program that perform an action. There are many different types of functions. On this page you will see functions used to showcase understanding of Loops, Conditional Statements, and Arrays. Before we get too far into functions we need to explain variables and parameters. All programs use variables and parameters to contain values that the program will need.<br>
                     <blockquote><b>Variable</b> - we are used to thinking about variables in math as a letter substituting for a number. In programming it is a little broader than that. A variable is basically a box that contains something. It could be a number, text, or something else. We can define a variable using this format.
                     <blockquote>var variableName = "value";</blockquote>
@@ -45,11 +45,11 @@
                     <li> return value - this is the result of the function or what comes out of it. It is returned to the part of the program that called the function (or made it run)</li>
                 </ul>
                Now lets show some functions at work!
-                </p>
+                </section>
             <hr>
             <!--- Loops --->
             <h3><a name="loops"></a> Loops </h3>
-            <p>
+            <section>
                 Loops refer to a function where the statments are run multiple times while a certian condition applys. For our example we are going to do a loop that will display a times table. The user will input which times table they want to see and how large they would like it. When the user pushes the button, the computer will call the function to run. The statements inside the function will calculate the times table and add each times table to what will be the output, until the table size that the user specified is met. When the size is met the program will send the total table to the computer for it to display. The code for this loop looks like this:
                 <blockquote>
 
@@ -72,11 +72,11 @@
                 <button type="button" onclick="timesTable()"> Show the table!</button><br>
                 Results: <br>
             <div id="timesTableDiv"></div>
-            </p>
+            </section>
 <hr>
             <!---- Conditional Statements ---->
             <h3><a name="condState"></a> Conditional Statements </h3>
-            <p>
+            <section>
                 Conditional Statements ask the computer to evaluate if a condition or series of conditions are met. We go though this in our lives as well. For example, in order to go on space mountain by yourself you have to be at least 7 years old and 40 inches tall. We can write a function to ask the user for their age and height to determine if they can ride alone. If the rider is over 40 inches but not yet 7 they can still ride with another rider who is over 14. The function would look like this.
                 <blockquote>
                     function canRide(age,height){
@@ -102,11 +102,12 @@
     How tall are you in inches? <input type="text" id="riderHeight"><br>
     Can you ride? <button type="button" onclick="canRide()"> Find out!</button><br>
     Results: <div id="rideDiv"></div>
-    </p>
+    </section>
 <hr>
             <!---- Arrays --->
-            <h3><a name="array"></a>Arrays</h3>
-            <p>
+                <section>
+                <h3><a name="array"></a>Arrays</h3>
+
                 Arrays are a speccial kind of variable that can hold more than one value. This allows us to store lists in one variable. Here are a few important things to understand about arrays. <br>
 
                     Syntax - var<italics>array_name = [item1, item2, item3,...]</italics><br>
@@ -126,11 +127,12 @@ We just found out that the Jungle Cruise ride will be closed for rennovations. T
 <button type="button" onclick="addPirates()">Switch Rides</button><br>
 Here is our updated list of rides:
 <div id="updatedRidesDiv"></div>
-           </p>
+           </section>
     <hr>
     <!-- Associative Arrays-->
-    <h3><a name="assocarray"></a> Associative Arrays</h3>
-    <p>
+    <section>
+                <h3><a name="assocarray"></a> Associative Arrays</h3>
+
         Associative Arrays are arrays that use names instead of numbers as an index. This can cause all sorts of problems. JavaScript does not accept named arrays, instead use an Object.
         <br> An associative array would look like this:
         <blockquote>
@@ -140,7 +142,7 @@ Here is our updated list of rides:
             rideArray[location] = "Tomorrowland";
 </blockquote>
 Again, this type of Array is not supported in JavaScript. You can only use numbered Arrays.
-    </p>
+                </section>
             </main>
             <footer>
                 <p>&copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>

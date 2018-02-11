@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 JSON - Local Storage API | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 5 - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/lesson3.css">
+</head>
+
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="#">Next Lesson</a>
+        <a href="#objects">Objects</a>
+        <a href="#array">Arrays</a>
+        <a href="#assocArray">Associative Arrays</a>
+    </nav>
+    <main>
+        <h2>Lesson 5 - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
+        <p>
+            The storage property has two main types; localStorge and sessionStorage. They behave much the same way except sessionStorage is emptied at the end of each session, and localStorage persists accross multiple sessions. This is a big improvement over the storage of the past, which was mostly done with cookies. An example of localStorage would be an online shopping cart. If you have ever added something to your cart, then come back to the site later to find the item still in your cart, this is most likely done utilizing localStorage.
+        </p>
+        <h3>Syntax</h3>
+        <p>
+            To save data<br> localStorage.setItem("itemName", "value")<br> Example:
+            <br>
+            <br> localStorage.setItem("username", "Bill");<br> To access stored data<br> alert("itemName = " = localStorage.getItem("itemName"));<br> Example: <br> alert("username = " + localStorage.getItem("username"));<br> The alert output would be "username = Bill"
+        </p>
+        <h3>Is it supported?</h3>
+        <p>web storage is not always supported so before using you must check to ensure that web storage (local storage) is available.
+            <br> if (typeof(Storage) !== "undefined"){ //code to execute}<br> else{ <br> //code to execute}<br> This is read as if type of storage is not undefined. As long as the type of storage is not undefined you can use local storage for your page.
+        </p>
+        <section id = "objects">
+            <h3>Objects</h3>
+            This first example is an example of creating an API object. We set the itemName and the value. Here you can create your own object and store your favorite color. <br> Favorite Color:<input type="text" id="favoriteColor"><button type="button" onclick="saveColor()">Save Color</button><br> Now we can retrieve your favorite color from local storage. <br> <button type="button" onclick="showColor()">Display Color</button>
+            <div id="outputColor"></div>
+        </section>
+        <section id="arrays">
+            <h3>Arrays</h3>
+            >We can do the same thing with Arrays. But local storage can only support stings. We can convert to a string using JSON.stringify() and convert back using JSON.parse. Please input your favorite colors seperated with a comma (please enter at least 3). <input type="text" id="colorArray"><button type="button" onclick="saveArray()">Save Array</button><br> Now lets see out new array. Remember Arrays are numbered with the first item as number 0. So which array item do you want to see? <input type="number" id="arrayNum"><button type="button" onclick="displayArray()"><br><div id="arrayOutput"></div></button>
+        </section>
+        <section is="assocArray">
+            <h3>Associative Arrays</h3>
+            Associative Arrays are arrays with names instead of numbers assigned to each value. Lets build an associative array right now. Lets make a list of your favorites. <br>
+            Name: <input type="text" id="name"><br>
+            Food: <input type="text" id="food"><br>
+            Music: <input type="text" id="music"><br>
+            Movie: <input type="text" id="movie"><br>
+            Insect: <input type="text" id="insect"><br>
+            <button type="button" onclick="saveAssocArray()">Save Associative Array</button><br>
+            Now lets display your associative array. Just enter which catagory name you want to see (name, food, music, movie, instect) and click the button to see the stored result.<br>
+            Catagory<input type="text" id="arrayValueName"><button type="button" onclick="displayAssocArrayValue()">Display Value</button><div id="assocArrayOutput"></div>
+        </section>
+
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+    <script src="js/lesson5.js"></script>
+</body>
+
+</html>
