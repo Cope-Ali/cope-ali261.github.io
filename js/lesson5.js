@@ -3,7 +3,7 @@
 function saveColor() {
     if (typeof (Storage) !== "undefined") {
         var colorIn = document.getElementById('favoriteColor');
-        localStorage.setItem("favColor", colorIn);
+        localStorage.setItem("favColor", colorIn.value);
     } else {
         var output = "I am sorry your browser doesn't support local storage.";
         document.getElementById("outputColor").innerHTML = output;
@@ -12,16 +12,20 @@ function saveColor() {
 //display object
 function showColor() {
     var colorOut = localStorage.getItem("favColor");
-    document.getElementById("outputColor").innerHTML = "Favorite Color: " + colorOut;
+    document.getElementById("outputColor").innerHTML = "Favorite Color: " + localStorage.getItem("favColor");
 }
 
 //Array//
 //save array
 function saveArray() {
     if (typeof (Storage) !== "undefined") {
-        var colorArrayIn = [document.getElementById('colorArray')];
-        var colorArrayString = JSON.stringify(colorArrayIn);
+        var oneColor = document.getElementById("colorOne").value;
+        var twoColor = document.getElementById("colorTwo").value;
+        var threeColor = document.getElementById("colorThree").value;
+        var colorArray = [oneColor, twoColor, threeColor];
+        var colorArrayString = JSON.stringify(colorArray);
         localStorage.setItem("colorArray", colorArrayString);
+        console.log(colorArrayString);
     } else {
         var output = "I am sorry your browser doesn't support local storage.";
         document.getElementById("arrayOutput").innerHTML = output;
@@ -29,9 +33,11 @@ function saveArray() {
 }
 //display array
 function displayArray() {
-    var colors = localStorage.getItem("colorArrayString");
-    var colorsArray = [JSON.parse(colors)];
-    var number = parseFloat(document.getElementById('arrayNum'));
+    var colors = localStorage.getItem("colorArray");
+    console.log(colors);
+    var colorsArray = JSON.parse(colors);
+    console.log(colorsArray);
+    var number = parseFloat(document.getElementById('arrayNum').value);
     var output = colorsArray[number];
     document.getElementById("arrayOutput").innerHTML = output;
 }
@@ -40,11 +46,11 @@ function displayArray() {
 //save Associative Array
 function saveAssocArray() {
     if (typeof (Storage) !== "undefined") {
-        var nameIn = document.getElementById("name");
-        var foodIn = document.getElementById("food");
-        var musicIn = document.getElementById("music");
-        var movieIn = document.getElementById("movie");
-        var insectIn = document.getElementById("insect");
+        var nameIn = document.getElementById("name").value;
+        var foodIn = document.getElementById("food").value;
+        var musicIn = document.getElementById("music").value;
+        var movieIn = document.getElementById("movie").value;
+        var insectIn = document.getElementById("insect").value;
         var array = {
             name: nameIn,
             food: foodIn,
@@ -52,8 +58,9 @@ function saveAssocArray() {
             movie: movieIn,
             insect: insectIn
         };
+        console.log(array)
         var assocArrayString = JSON.stringify(array);
-        localStorage.setItem(assocArrayString);
+        localStorage.setItem("assocArray", assocArrayString);
     } else {
         var output = "I am sorry your browser doesn't support local storage.";
         document.getElementById("assocArrayOutput").innerHTML = output;
@@ -61,29 +68,19 @@ function saveAssocArray() {
 }
 //display Associative array
 function displayAssocArrayValue() {
-    var arrayValue = document.getElementById("arrayValueName");
-    var value = function convertValue(arrayValue){
-    if (arrayValue == "NAME" || arrayValue == "Name" || arrayValue == "name") {
-        arrayValue = "name";
-    }
-    else if (arrayValue == "FOOD" || arrayValue == "Food" || arrayValue == "food") {
-        arrayValue = "food";
-    }
-   else if (arrayValue == "MUSIC" || arrayValue == "Music" || arrayValue == "music") {
-        arrayValue = "music";
-    }
-    else if(arrayValue == "MOVIE" || arrayValue == "Movie" || arrayValue == "movie") {
-        arrayValue = "movie";
-    }
-    else if (arrayValue == "INSECT" || arrayValue == "Insect" || arrayValue == "insect") {
-        arrayValue = "insect";
-    }
-    else {
-        document.getElementById("assocArrayOutput").innerHTML = "Please enter a vaild catagory."
-    }
-    return arrayValue}
-    var getArray = localStorage.getItem( "assocArrayString");
-    var favoriteArray = [JSON.parse(getArray)]
-    var output = favoriteArray.arrayValue;
-    document.getElementById("assocArrayOutput").innerHTML = output;
+    var getArray = localStorage.getItem("assocArray");
+    console.log(getArray);
+    var favoriteArray = JSON.parse(getArray);
+    console.log(favoriteArray);
+    var nameSaved = favoriteArray.name;
+    var foodSaved = favoriteArray.food;
+    var musicSaved = favoriteArray.music;
+    var movieSaved = favoriteArray.movie;
+    var insectSaved = favoriteArray.insect;
+    console.log(nameSaved, foodSaved, musicSaved, movieSaved, insectSaved);
+    document.getElementById("nameOutput").innerHTML = nameSaved;
+    document.getElementById("foodOutput").innerHTML = foodSaved;
+    document.getElementById("musicOutput").innerHTML = musicSaved;
+    document.getElementById("movieOutput").innerHTML = movieSaved;
+    document.getElementById("insectOutput").innerHTML = insectSaved;
 }
