@@ -1,0 +1,20 @@
+h3 {color: green;}
+
+h3.hide {display:none}
+
+h3.color{color: aqua;}
+
+img {float:left;}
+
+img.right {float:right;}
+
+img.hideCat {display:none}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
