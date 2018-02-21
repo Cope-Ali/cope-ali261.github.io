@@ -1,0 +1,12 @@
+#mouseDiv {
+    color:black;
+}
+
+.color#mouseDiv {
+    color: white;
+    background-color: blue;
+}
+
+.hide{
+    visibility: hidden;
+}

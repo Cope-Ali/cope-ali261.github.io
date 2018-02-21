@@ -1,0 +1,55 @@
+h2#exampleText {
+    color: green;
+    font-size: 30px;
+    border: black, 2px,2px,2px,2px;
+    transition: color 5s, font-size 5s;
+}
+
+h2#exampleText.color{
+    color: magenta;
+    font-size: 60px;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+@keyframes text {
+    from {
+        color: green;
+        margin-top: 10px;
+    }
+    to {
+        color: magenta;
+        margin-top: 100px;
+    }
+}
+
+h3.animate {
+    color: green;
+    margin-top: 10px;
+    animation-name: text;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+}
+
+@keyframes move {
+    0% {margin-left: 0%; background-color: rgba(80,80,200,0);}
+    25% {margin-left: 20%; background-color: rgba(80,80,200,0.25);}
+    50% {margin-left: 40%;background-color: rgba(80,80,200,0.50);}
+    75% {margin-left: 60%;background-color: rgba(80,80,200,0.75);}
+    100%{margin-left: 80%;background-color: rgba(80,80,200,1);}
+}
+
+img.animate {
+    float: left;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+footer{
+    clear:both
+}

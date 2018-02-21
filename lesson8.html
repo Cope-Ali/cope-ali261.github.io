@@ -1,34 +1,63 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CIT 261 CSS3 Transitions and Animations | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 8 -Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-        <link rel="stylesheet" href="css/lesson3.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 CSS3 Transitions and Animations | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 8 -Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/lesson3.css">
+    <link rel="stylesheet" href="css/lesson8.css">
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <h1> Ali Cope</h1>
-        </header>
-        <nav>
-            <a href="/cope-ali261.github.io/">Home</a>
-            <a href="lesson9.html">Next Lesson</a>
-            <a href="#objects">Objects</a>
-            <a href="#array">Arrays</a>
-            <a href="#assocArray">Associative Arrays</a>
-        </nav>
-        <main>
-            <h2>Lesson 8 -Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="lesson9.html">Next Lesson</a>
 
-        </main>
-        <footer>
-            <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-        </footer>
-        <script src="js/lesson7.js"></script>
-    </body>
+    </nav>
+    <main>
+        <h2>Lesson 8 -Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
+        <p>
+            CSS transitions create a way to control the speed that CSS properties change. This allows us to change things over time instead of having changes take place instantly. <br>
+        </p>
+        <ul>
+            <li>transition-property --> name(s) of properties to which the transition will apply</li>
+            <li> transition-duration --> length of time ti takes the transition to complete. This can be one duration for the whole transition or can be broken down into different speeds for different properties</li>
+            <li>transition-timing-function --> Determines how transition progresses from start to finish </li>
+            <li>transition-delay --> determines how long until the transition starts</li>
+        </ul>
+        <p>We can trigger these transitions using a JavaScript button just like we did in the last lesson by adding classes. Here is what the CSS looks like for transitions. </p>
+        <img src="img/transitionCSS.png" alt="transition CSS code">
+        <div class="example" id="clearfix">
+            <h2 id="exampleText" class = "">WOW! This is fun!</h2>
+        </div>
+        <section id="buttons">
+            <button type="button" onclick="colorTrans()">Text Change Color/ Size</button><br>
+        </section>
+        <section id="clearfix">
+            <section id="animations">
+        <h2>Animations</h2>
+            <p>Animations use "keyframes" to specify what styles each element will have at which time. We can also add loops to have the animation run over again. On the first animation we have it set to run 3 times, on the second we want it to alternate forward and backward infinitly. The only way to stop the animation would be to click the button again, to remove the class we added. This is what the CSS code looks like for the animation. It is written in two different styles, both using @keyframe.
+            </p>
+                <img src="img/animationCSS.png">
+            <h3 id="animationText" class="">Animation Text</h3>
+            <img src="img/smallCat.png" alt="small cat" id="animationCat" class="">
+        </section>
+            <section class="clearfix">
+            <button type="button" onclick="animateText()">Text change</button><br>
+            <button tyoe="button" onclick="moveCat()">Move Cat</button><br>
+            </section></section>
+
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+    <script src="js/lesson8.js"></script>
+</body>
 
 </html>
