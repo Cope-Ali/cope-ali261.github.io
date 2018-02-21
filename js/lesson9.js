@@ -8,7 +8,7 @@ function mouse() {
     console.log("mouse");
 }
 
-//document.querySelector('main')addEventListener('touchstart', touchFunction);
+document.querySelector('#mobile')addEventListener('touchstart', touchFunction,false);
 
 // what happens when touchstart
 function touchFunction(ev) {
