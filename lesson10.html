@@ -17,18 +17,48 @@
     <nav>
         <a href="/cope-ali261.github.io/">Home</a>
         <a href="lesson11.html">Next Lesson</a>
-        <a href="#objects">Objects</a>
-        <a href="#array">Arrays</a>
-        <a href="#assocArray">Associative Arrays</a>
+        <a href="#video">Video</a>
+        <a href="#audio">Audio</a>
+        <a href="#canvas">Canvas</a>
     </nav>
     <main>
         <h2>Lesson 10 - HTML5 Tags - Video, Audio, and Canvas</h2>
-
+        <section id="video">
+            <h3>Video</h3>
+            <p> You can embed video directly into your HTML without using a plug-in by using the &lt;video&gt; tag. You can specify the size of the video viewport using width and height properties. Adding control to your video tag will give the user controls to start, stop and pause the video. Instead of controls, you can also set the video to autoplay and the video will start when the page loads. There are three supported file types: MP4, WebM, and Ogg. If you specify more than one source the browser will play the first supported source.</p>
+            <h3>Example</h3>
+            <img src="img/videoCode.png" alt="video tag coding example"><br>
+            <video width="320" height="240" controls>
+            <source src="img/become-360p-eng.mp4" type="video/mp4">
+            </video>
+            <br> Become | <a href="https://www.lds.org/media-library/video/2018-01-0030-become?lang=eng">Source: LDS.org</a>
+        </section>
+        <section id="audio">
+            <h3>Audio</h3>
+            <p>You can embed sound directly into your webpage without having to use a plug in. This is done by using the &lt;audio&gt; tag. Including "controls" will give the user controls to play pause and stop the audio. Only MP3, Wav, and Ogg are supported file types.</p>
+            <h3>Example</h3>
+            <img src="img/audioCode.png" alt="audio tag coding example">
+            <br>
+            <audio controls>
+            <source src="Windows-Piano.mp3" type="audio/mp3">
+            </audio>
+        </section>
+        <section id="canvas">
+            <h3>Canvas</h3>
+            <p>Canvas is used to draw graphics on a webpage using JavaScript. You can add canvas to your page using the&lt;canvas&gt; tag. The canvas is basically a container to hold the graphics drawn by the javascript code. By default canvas has no border or content. Be sure to include id, height and width properties. For our example I will also add a border property so we can see the defined canvas area. </p>
+            <h3>Example</h3>
+            <img src="img/canvasCode.png" alt="canvas tag coding example"><br>
+            <canvas id="canvasExample" width="320" height="240" style="border:2px dashed black;">
+            </canvas>
+            <br>
+            <button type="button" onclick="drawX()">Click here to draw an X on canvas</button>
+        </section>
+        <p>Sources: w3schools.com | lds.org | AudioSoundclips.com</p>
     </main>
     <footer>
         <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
     </footer>
-    <script src="js/lesson7.js"></script>
+    <script src="js/lesson10.js"></script>
 </body>
 
 </html>
