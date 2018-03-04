@@ -2,33 +2,83 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CIT 261 DOM Manipulation | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 6 - DOM Manipulation using createElement, appendChild, insertBefore, removeChild documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-        <link rel="stylesheet" href="css/lesson3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 DOM Manipulation | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 6 - DOM Manipulation using createElement, appendChild, insertBefore, removeChild documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/lesson3.css">
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <h1> Ali Cope</h1>
-        </header>
-        <nav>
-            <a href="/cope-ali261.github.io/">Home</a>
-            <a href="lesson7.html">Next Lesson</a>
-            <a href="#objects">Objects</a>
-            <a href="#array">Arrays</a>
-            <a href="#assocArray">Associative Arrays</a>
-        </nav>
-        <main>
-            <h2>Lesson 6 - DOM Manipulation using createElement, appendChild, insertBefore, removeChild</h2>
-
-        </main>
-        <footer>
-            <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-        </footer>
-        <script src="js/lesson6.js"></script>
-    </body>
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="lesson7.html">Next Lesson</a>
+        <a href="#createElement">createElement</a>
+        <a href="#appendChild">appendChild</a>
+        <a href="#insertBefore">insertBefore</a>
+        <a href="#removeChild">removeChild</a>
+    </nav>
+    <main>
+        <h2>Lesson 6 - DOM Manipulation using createElement, appendChild, insertBefore, removeChild</h2>
+        <p> We can use DOM to change the content in our HTML. We can add, change or remove a child element. We can even insert one element infront of another. We will do all of this starting with a basic list of favorite movies.</p>
+        <ol>
+            <li>Princess Bride</li>
+            <li>Moana</li>
+            <li>World War Z</li>
+        </ol>
+        <h3 id="#createElement">createElement</h3>
+        <hr>
+        <p>We can use DOM to create a new element on our page. Click the button to add a new paragraph</p>
+        <button type="button" onclick="createStar()"> Create New Paragraph</button>
+        <div id="div1"></div>
+       <br>
+        <img src="img/lesson6code1.png" alt="code showing creation of new paragraph">
+        <h3 id="#appendChild">appendChild</h3>
+        <hr>
+<p> Okay back to our list. Instead of creating a new element we want to just change the list element we already created. We can do this with appendChild. The "li" is a child of our "ol" Click the button to add Joe vs the Volcano to our list of favorite movies
+    <br>***Note - we actually appended the child in the first example to add text to the new paragraph we created***</p>
+        <ol id="movies">
+            <li>Princess Bride</li>
+            <li>Moana</li>
+            <li>World War Z</li>
+        </ol>
+        <button type="button" onclick="changeList()">Add Movie</button>
+        <br>
+        <img src="img/changeList.png" alt="code showing how to change list">
+        <h3 id="#insertBefore">insertBefore</h3>
+        <hr>
+        <p>Tonight I watched Star Wars and I loved it. Now I want to add it as my number one movie. I can do this using insertBefore.  </p>
+        <ol id="movies2">
+            <li>Princess Bride</li>
+            <li>Moana</li>
+            <li>World War Z</li>
+            <li>Joe vs. the Volcano</li>
+        </ol>
+        <button type="button" onclick="addFirst()">Insert at the Top</button>
+        <br>
+        <img src="img/addFirst.png" alt="code to add new item to top of list">
+        <h3 id="#removeChild">removeChild</h3>
+        <hr>
+        <p> I have now seen Star Wars several times and I am getting a little sick of it. As much as I love this movie I just have to take it off my list. This is easy to do with removeChild.</p>
+        <ol id="movies3">
+            <li>Star Wars</li>
+            <li>Princess Bride</li>
+            <li>Moana</li>
+            <li>World War Z</li>
+            <li>Joe vs. the Volcano</li>
+        </ol>
+        <button type="button" onclick="remove()">Remove Star Wars</button>
+        <br>
+        <img src="img/functionRemove.png" alt="code to remove image">
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+    <script src="js/lesson6.js"></script>
+</body>
 
 </html>
