@@ -2,32 +2,49 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CIT 261 CSS3 Annimations - designing, defining, and triggering | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 11 - Designing, Defining, and Triggering CSS3 Annimations without Custom Libraries (Thought Library) documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-        <link rel="stylesheet" href="css/lesson3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 CSS3 Annimations - designing, defining, and triggering | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 13 - Designing, Defining, and Triggering CSS3 Annimations without Custom Libraries (Thought Library) documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/lesson3.css">
+    <link rel="stylesheet" href="css/lesson13.css">
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <h1> Ali Cope</h1>
-        </header>
-        <nav>
-            <a href="/cope-ali261.github.io/">Home</a>
-            <a href="#objects">Objects</a>
-            <a href="#array">Arrays</a>
-            <a href="#assocArray">Associative Arrays</a>
-        </nav>
-        <main>
-            <h2>Lesson 11 - Designing, Defining, and Triggering CSS3 Annimations without Custom Libraries (Thought Library)</h2>
-
-        </main>
-        <footer>
-            <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-        </footer>
-        <script src="js/lesson7.js"></script>
-    </body>
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="#objects">Objects</a>
+        <a href="#3d">3D Animation</a>
+        <a href="#sprite">Sprite Animation</a>
+    </nav>
+    <main>
+        <h2>Lesson 13 - Designing, Defining, and Triggering CSS3 Annimations without Custom Libraries (Thought Library)</h2>
+        <p>An animation allows us to change as many CSS properties as we want, as many times as we want. To use the animations we first must create some keyframes to define the animation. Keyframes will tell us what styles the animation will hold at which times. This animation uses two keyframes. The firstto move the box and the second to change the font color.</p>
+        <div class="simpleEx"> This is a simple Animation <br> Hover over me to see change</div>
+        <img src="img/simpleAniCSS13.png" alt="css code for 2d animation example">
+        <h3 id="3d"> 3D Animations</h3>
+        <p> By combining transforms and animations we can make 3D animations. Check out this example of a box spinning across the page.</p>
+        <section class="cardCont">
+            <div id="card">
+                <figure class="front"><br>Front!</figure>
+                <figure class="back"><br>Back!</figure>
+            </div>
+        </section>
+        <div class="fixed"></div>
+        <img src="img/lesson13img2.png" alt="css code for animaion transform combined">
+        <h3 id="sprite">Sprite Animation</h3>
+        <p>Another eally cool animation we can do involves sprites. Sprits are basically a large image that is composed of the same image several times with slight variation so it looks animated when run in a series. Think of making flip book. Its the same general concept.</p>
+        <div class="walk"></div>
+        <p>Here is the CSS code to run the sprite</p>
+        <img src="img/spriteCSS.png" alt="CSS code for walking sprite">
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+</body>
 
 </html>

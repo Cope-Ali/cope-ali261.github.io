@@ -1,34 +1,65 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CIT 261 CSS3 Transitions - designing, defining, and triggering | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 11 - Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library) documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-        <link rel="stylesheet" href="css/lesson3.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 CSS3 Transitions - designing, defining, and triggering | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 11 - Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library) documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/lesson3.css">
+    <link rel="stylesheet" href="css/lesson11.css">
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <h1> Ali Cope</h1>
-        </header>
-        <nav>
-            <a href="/cope-ali261.github.io/">Home</a>
-            <a href="lesson12.html">Next Lesson</a>
-            <a href="#objects">Objects</a>
-            <a href="#array">Arrays</a>
-            <a href="#assocArray">Associative Arrays</a>
-        </nav>
-        <main>
-            <h2>Lesson 11 - Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</h2>
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="lesson12.html">Next Lesson</a>
+    </nav>
+    <main>
+        <h2>Lesson 11 - Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</h2>
+        <p>
+            CSS transitions create a way to control the speed that CSS properties change. This allows us to change things over time instead of having changes take place instantly. <br> The shorthand syntax is: <br>
+            <img src="img/transitionSyntax.png" alt="css code for transition syntax" <br>
+        </p>
+        <ul>
+            <li>transition-property --> name(s) of properties to which the transition will apply</li>
+            <li> transition-duration --> length of time ti takes the transition to complete. This can be one duration for the whole transition or can be broken down into different speeds for different properties</li>
+            <li>transition-timing-function --> Determines how transition progresses from start to finish
+                <ul class="secondList">
+                    <li>ease</li>
+                    <li>ease-in</li>
+                    <li>ease-out</li>
+                    <li>ease-in-out</li>
+                    <li>linear</li>
+                    <li>step-start</li>
+                    <li>step-end</li>
+                    <li>steps(#, start|end)</li>
+                    <li>cubic-bezier(#,#,#,#)</li>
+                </ul>
+            </li>
+            <li>transition-delay --> determines how long until the transition starts</li>
+        </ul>
+        <p>The most common use for a transition on a webpage is changing the color or size of an option when the mouse hovers over it. Try hovering over these two menu links to see a transition at work. We can do this using the :hover state. We don't need any javascript to trigger this transition, just HTML and CSS. </p>
 
-        </main>
-        <footer>
-            <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-        </footer>
-        <script src="js/lesson7.js"></script>
-    </body>
+        <a class="example" href="/cope-ali261.github.io/">Home</a>
+        <a class="example" href="lesson12.html">Next Lesson</a>
+        <p>This is what the CSS code looks like for this commonly used transition:</p>
+        <img src="img/transitionlink11.png" alt="css code for transitions">
+        <p> Transitions are a good fit for anything that moves between two states. Here is another example of a square that changes color, size, and position on :hover. I have set this one up with a 2 second delay so you can see the difference. Be sure to hover for at least two seconds to see the transition. As soon as you stop hovering the transition stops and returns to its original state.</p>
+        <div class="container">
+            <div class="square">Hover over me!</div>
+        </div>
+<p>CSS for square transition:</p>
+        <img src="img/transitionSq11.png" alt="css code for changing square">
+
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+</body>
 
 </html>

@@ -2,33 +2,53 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> CIT 261 CSS3 Transforms - designing, defining, and triggering | Ali Cope | BYU-Idaho</title>
-        <meta name="description" content=" Lesson 11 - Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library) documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
-        <link rel="stylesheet" href="css/lesson3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CIT 261 CSS3 Transforms - designing, defining, and triggering | Ali Cope | BYU-Idaho</title>
+    <meta name="description" content=" Lesson 12 - Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library) documentation site to showcase lesson mastery for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="css/lesson3.css">
+    <link rel="stylesheet" href="css/lesson12.css">
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <h1> Ali Cope</h1>
-        </header>
-        <nav>
-            <a href="/cope-ali261.github.io/">Home</a>
-            <a href="lesson13.html">Next Lesson</a>
-            <a href="#objects">Objects</a>
-            <a href="#array">Arrays</a>
-            <a href="#assocArray">Associative Arrays</a>
-        </nav>
-        <main>
-            <h2>Lesson 11 - Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</h2>
-
-        </main>
-        <footer>
-            <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
-        </footer>
-        <script src="js/lesson7.js"></script>
-    </body>
+<body>
+    <header>
+        <h1> Ali Cope</h1>
+    </header>
+    <nav>
+        <a href="/cope-ali261.github.io/">Home</a>
+        <a href="lesson13.html">Next Lesson</a>
+        <a href="#3d">Transform 3D</a>
+    </nav>
+    <main>
+        <h2>Lesson 12 - Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</h2>
+        <p> Transforms are used to change the shape and position of the content without affecting the normal document flow. There are two major properties that are used to define transforms in CSS. theyare "transform" and "transform-origin" <br>
+            <strong>Transform:</strong> Identifies the transforms to apply tothe element. This list is space seperated and applied one after another in order from right to left.<br>
+            <strong> Transform-origin:</strong> Identifies the position of the origin. The default is the center of the element but it can be moved. It is used by several of the transforms like rotations, scaling, or skewing. <br>
+            <span class="reference"> Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms</span>
+        </p>
+        <h3>Examples</h3>
+        <p> We can use transform to rotate and skew the following text. Just hover over to see the transform.</p>
+        <div class="rotateCont">
+            <p class="rotate"> Rotate 90&deg;</p>
+        </div>
+        <div class="skewCont">
+            <p class="skew"> Skew Me!</p>
+        </div>
+        <img src="img/transform12.png" alt="CSS code for 2D transform">
+        <h3 id="3d"> Transform in 3D</h3>
+        <p> Now that we understand the basics we can do something really cool, we can transform in 3D! We need to add the "perspective" attribute to make this work. Check out the example and the code below it. </p>
+        <section class="cardCont">
+            <div id="card">
+                <figure class="front"><br>Front!</figure>
+                <figure class="back"><br>Back!</figure>
+            </div>
+        </section>
+        <img src="img/transform3d12.png" alt="CSS code for 3D transform">
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+</body>
 
 </html>

@@ -1,0 +1,132 @@
+@keyframes text {
+    from {
+        color: white;
+        margin-top: 10px;
+    }
+    to {
+        color: yellow;
+        font-weight: bold;
+        margin-top: 80px;
+    }
+}
+
+@keyframes move {
+    0% {
+        margin-left: 0%;
+        background-color: rgba(80, 80, 200, 0);
+    }
+    25% {
+        margin-left: 20%;
+        background-color: rgba(80, 80, 200, 0.25);
+    }
+    50% {
+        margin-left: 40%;
+        background-color: rgba(80, 80, 200, 0.50);
+    }
+    75% {
+        margin-left: 60%;
+        background-color: rgba(80, 80, 200, 0.75);
+    }
+    100% {
+        margin-left: 75%;
+        background-color: rgba(80, 80, 200, 1);
+    }
+}
+
+div.simpleEx {
+    height: 100px;
+    width: 200px;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: lightcoral;
+}
+
+div.simpleEx:hover {
+    float: left;
+    animation-name: move, text;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+footer,
+img {
+    clear: both;
+    display: block;
+}
+
+@keyframes moveTwo {
+    0% {
+        margin-left: 0%;
+    }
+    50% {
+        margin-left: 40%;
+    }
+    100% {
+        margin-left: 75%;
+    }
+}
+
+.cardCont {
+    width: 80px;
+    height: 100px;
+    position: relative;
+    padding-left: 20px;
+    perspective: 800px;
+}
+
+#card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+#card figure{
+    margin:0;
+    padding-left: 20px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+#card .front{
+    background: blueviolet;
+    color:white;
+}
+
+#card .back{
+    background: deeppink;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+#card:hover{
+    transform: rotateY(180deg);
+}
+
+.cardCont:hover {
+    animation-name: moveTwo;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+.walk {
+    width:100px;
+    height: 118px;
+    background: url(/img/walk-sequence.png) left center;
+    animation: play 1s steps(8) infinite;
+}
+
+@keyframes play{
+    100% {background-position:-656px;}
+}
+
+img {
+    padding-top: 20px;
+}
