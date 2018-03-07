@@ -119,7 +119,7 @@ img {
 .walk {
     width:100px;
     height: 118px;
-    background: url(/img/walk-sequence.png) left center;
+    background: url(img/walk-sequence.png) left center;
     animation: play 1s steps(8) infinite;
 }
 
