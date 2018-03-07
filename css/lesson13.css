@@ -130,3 +130,9 @@ img {
 img {
     padding-top: 20px;
 }
+
+.updated {
+    background-color: deepskyblue;
+    font-size: 1.5em;
+}
+
