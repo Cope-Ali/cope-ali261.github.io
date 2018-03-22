@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> What's the Weather | Weather App | Ali Cope | CIT 261 | BYU-Idaho</title>
+    <meta name="description" content="Weather app showing local weather, or weather by location search. Final app project for Ali Cope in CIT 261 JavaScript Mobile Development at Brigham Young University-Idaho.">
+    <link rel="stylesheet" href="weatherapp.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1> What's the Weather?</h1>
+        <h3><span id="currentDate"></span></h3>
+    </header>
+    <main>
+        <section id="searchBar">
+            <p>This is where the search bar will be</p>
+        </section>
+        <section id="currentConditions">
+            <h2>Conditions in <span id="cityState">City, State</span></h2>
+            <div>
+            <h3>Right Now</h3>
+            <img id="currentConditionImg" src="" alt="image of current conditions">
+            <p> Temp: <span id="currentTemp"></span> &deg; F </p>
+            <p> Rain: <span id="currentPercip"></span> in.</p>
+            <p> Wind: <span id="currentWind"></span> MPH</p>
+            </div>
+            <div>
+            <h3>Today</h3>
+            <img id="todayImg" src="" alt="image of today's weather conditions">
+            <p> High: <span id="todayHigh"></span> &deg; F</p>
+            <p> Low: <span id="todayLow"></span> &deg; F</p>
+            <p><span id="todayDescription"></span></p>
+            </div>
+
+        </section>
+        <section id="fiveDay">
+            <h2>5 Day Forecast</h2>
+            <div class="container">
+                <figure id = "carousel">
+                    <div id="dayOne">
+                        <p><span id="dayOneday"></span> <span id="dayOnemonth"></span> <span id="dayOnedate"></span></p>
+                        <img id="dayOneImg" src="" alt="image of weather conditions for one day from now">
+                        <p> High: <span id="dayOneHigh"></span> &deg; F </p>
+                        <p> Low: <span id="dayOneLow"></span> &deg; F</p>
+                    </div>
+                    <div id="dayTwo">
+                        <p><span id="dayTwoday"></span> <span id="dayTwomonth"></span> <span id="dayTwodate"></span></p>
+                        <img id="dayTwoImg" src="" alt="image of weather conditions for two days from now">
+                        <p> High: <span id="dayTwoHigh"></span> &deg; F </p>
+                        <p> Low: <span id="dayTwoLow"></span> &deg; F</p>
+                    </div>
+                    <div id="dayThree">
+                        <p><span id="dayThreeday"></span> <span id="dayThreemonth"></span> <span id="dayThreedate"></span></p>
+                        <img id="dayThreeImg" src="" alt="image of weather conditions for three days from now">
+                        <p> High: <span id="dayThreeHigh"></span> &deg; F </p>
+                        <p> Low: <span id="dayThreeLow"></span> &deg; F</p>
+                    </div>
+                    <div id="dayFour">
+                        <p><span id="dayFourday"></span> <span id="dayFourmonth"></span> <span id="dayFourdate"></span></p>
+                        <img id="dayFourImg" src="" alt="image of weather conditions for four days from now">
+                        <p> High: <span id="dayFourHigh"></span> &deg; F </p>
+                        <p> Low: <span id="dayFourLow"></span> &deg; F</p>
+                    </div>
+                    <div id="dayFive">
+                        <p><span id="dayFiveday"></span> <span id="dayFivemonth"></span> <span id="dayFivedate"></span></p>
+                        <img id="dayFiveImg" src="" alt="image of weather conditions for five days from now">
+                        <p> High: <span id="dayFiveHigh"></span> &deg; F </p>
+                        <p> Low: <span id="dayFiveLow"></span> &deg; F</p>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> &copy; Ali Cope CA <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </footer>
+    <script src="weatherapp.js"></script>
+</body>
+
+</html>

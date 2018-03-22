@@ -1,0 +1,169 @@
+header,
+main,
+footer {
+    display: block;
+    max-width: 100%;
+    min-width: 300px;
+    padding 1rem;
+    margin: auto;
+    align-content: center;
+    align-self: center;
+    background-color: azure;
+}
+
+header,
+footer {
+    background-color: cornflowerblue;
+}
+
+header h1 {
+    max-width: 100%;
+    margin-bottom: .15rem;
+    margin-top: 0;
+    font-family: cursive;
+    color: papayawhip;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header h3 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+footer {
+    color: papayawhip;
+    text-align: center;
+}
+
+#searchBar {
+    background-color: moccasin;
+    display: block;
+    border: solid 4px black;
+    padding: 5px;
+    margin: none;
+}
+
+#currentConditions {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#currentConditions >*{
+    padding: 10px;
+    flex: 1 100%;
+}
+
+#currentConditions h2{
+    text-align: center;
+    order: 1;
+    font-family: cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+#currentConditions div{
+    max-width: 45%;
+    order: 2;
+    border: dotted 1px;
+    font-size: .75rem;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#currentConditions div p{
+ margin-top: 0;
+}
+
+/*@keyframes rotate {
+    0% #carousel div:nth-child(1)   {  transform: translateZ(-124px)  rotateY(    0deg ); }
+    25%  #carousel div:nth-child(2) {  transform: translateZ(-124px)  rotateY(  -72deg ); }
+    50%  #carousel div:nth-child(3) {  transform: translateZ(-124px)  rotateY( -144deg ); }
+    75%  #carousel div:nth-child(4) {  transform: translateZ(-124px)  rotateY( -216deg ); }
+    100% #carousel div:nth-child(5) {  transform: translateZ(-124px)  rotateY( -288deg ); }
+}*/
+
+@keyframes rotate {
+    from,15% {
+        transform:rotateY(0);
+    }
+    20%,35%  {
+        transform:rotateY(-72deg);
+    }
+    40%,55%  {
+        transform:rotateY(-144deg) ;
+    }
+    60%,75%  {
+        transform:rotateY(-216deg);
+    }
+    80%,95%  {
+        transform:rotateY(-288deg) ;
+    }
+    to {
+        transform:rotateY(-360deg);
+    }
+}
+
+
+.container {
+    width: 290px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    margin: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#carousel div:hover {
+   animation-play-state: paused;
+}
+
+#carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-name: rotate;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    transform-style: preserve-3d;
+
+}
+
+#fiveDay h2{
+    font-family: cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#carousel p{
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+#carousel div {
+    background-color: cornflowerblue;
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 10px;
+    top: 10px;
+    border: 2px solid black;
+    text-align: center;
+
+}
+
+#carousel div:nth-child(1) { transform: rotateY(   0deg ) translateZ(103px); }
+#carousel div:nth-child(2) { transform: rotateY(  72deg ) translateZ(103px); }
+#carousel div:nth-child(3) { transform: rotateY( 144deg ) translateZ(103px); }
+#carousel div:nth-child(4) { transform: rotateY( 216deg ) translateZ(103px); }
+#carousel div:nth-child(5) { transform: rotateY( 288deg ) translateZ(103px); }
+
