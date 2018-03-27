@@ -18,7 +18,13 @@
     </header>
     <main>
         <section id="searchBar">
-            <p>This is where the search bar will be</p>
+            <form action = "">
+            Enter 5 Digit Zip Code: <input list = "zipcodes" id="zipsearch" size="5" class="list">
+            <datalist id="zipcodes" >
+            <option value= "">
+            </datalist>
+                <input type="submit" onclick="saveZip(), search(), assignZip()" class="submit">
+            </form>
         </section>
         <section id="currentConditions">
             <h2>Conditions in <span id="cityState">City, State</span></h2>

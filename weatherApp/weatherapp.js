@@ -1,6 +1,44 @@
+
+
+// create variable to use zipcode in API searches
+var apiZip = localStorage.getItem('savedZip');
+
+// create datalist for search based on past searches
+function search(){
+    // create new option
+    var newItem = document.createElement("OPTION");
+    // get inputted zipcode
+    var zipInput = document.getElementById('zipsearch').value;
+    console.log(zipInput);
+    // assign value to new option*/
+    newItem.setAttribute("value", zipInput);
+}
+
+//save last searched zip code to local storage
+function saveZip(){
+    if(typeof (Storage) !== "undefined"){
+       localStorage.savedZip = document.getElementById("zipsearch").value;
+        console.log(localStorage.savedZip);
+    }
+}
+
+
+function assignZip(apiZip){
+    var fromSorage = localStorage.getItem('savedZip');
+    console.log(fromSorage);
+    var apiZip;
+    if (fromSorage != "undefined"){
+        apiZip = fromSorage;
+    }
+    else {
+        apiZip = 83460;
+    }
+console.log(apiZip);
+}
+
 // Current Conditions
 var currentConditions = new XMLHttpRequest();
-currentConditions.open('GET', 'https://api.wunderground.com/api/6710307f40d51364/conditions/q/CA/Redding.json', true);
+currentConditions.open('GET', 'https://api.wunderground.com/api/6710307f40d51364/conditions/q/' + apiZip + '.json', true);
 currentConditions.send();
 
 currentConditions.onload = function (){
@@ -17,7 +55,7 @@ currentConditions.onload = function (){
 
 // 5 day forecast
 var tenDay = new XMLHttpRequest();
-tenDay.open("GET", "https://api.wunderground.com/api/6710307f40d51364/forecast10day/q/CA/Redding.json", true);
+tenDay.open("GET", "https://api.wunderground.com/api/6710307f40d51364/forecast10day/q/" + apiZip + ".json", true);
 tenDay.send();
 
 tenDay.onload = function () {
