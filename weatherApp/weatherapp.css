@@ -43,13 +43,13 @@ input.submit{
 
 }
 
-input.submit:hover {
+input.submit:hover, input.submit:active {
     box-shadow: 6px 6px 12px yellow;
     background-color: cornflowerblue;
     color: white;
 }
 
-input.list:hover{
+input.list:hover, input.list:active{
     border: 4px solid cornflowerblue;
     box-shadow: 5px 5px 10px yellow;
 
@@ -103,11 +103,13 @@ footer {
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
+    transition: all 3s ease-in;
 }
 
 #currentConditions div p{
  margin-top: 0;
 }
+
 
 /*@keyframes rotate {
     0% #carousel div:nth-child(1)   {  transform: translateZ(-124px)  rotateY(    0deg ); }
@@ -197,3 +199,28 @@ footer {
 #carousel div:nth-child(4) { transform: rotateY( 216deg ) translateZ(103px); }
 #carousel div:nth-child(5) { transform: rotateY( 288deg ) translateZ(103px); }
 
+@keyframes slideFromLeft{
+    0%{
+       transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight{
+    0%{
+        transform: translateX(100%)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#currentConditions div.rightNow{
+    animation: 2s ease-out 0s 1 slideFromLeft;
+}
+
+#currentConditions div.today{
+    animation: 2s ease-out 0s 1 slideFromRight;
+}
