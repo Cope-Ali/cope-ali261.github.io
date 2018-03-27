@@ -2,6 +2,8 @@
 
 // create variable to use zipcode in API searches
 var apiZip = localStorage.getItem('savedZip');
+if (apiZip < 0)
+     apiZip = 83460;
 
 // create datalist for search based on past searches
 function search(){
