@@ -1,6 +1,6 @@
 header,
 main,
-footer {
+footer p {
     display: block;
     max-width: 100%;
     min-width: 300px;
@@ -8,7 +8,7 @@ footer {
     margin: auto;
     align-content: center;
     align-self: center;
-    background-color: azure;
+    background-color: rgba(100, 149, 237, 0.4);
 }
 
 header,
@@ -65,6 +65,11 @@ header h3 {
 footer {
     color: papayawhip;
     text-align: center;
+    height: 3rem;
+}
+
+footer p {
+    padding-top: 1rem;
 }
 
 #searchBar {
